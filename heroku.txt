@@ -1,0 +1,8 @@
+ heroku login
+git init
+heroku git:remote -a qwerty1237
+ git add .
+ git commit -am "make it better"
+Heroku config:set DISABLE_COLLECTSTATIC=1
+ git push heroku master
+type nul > .gitignore

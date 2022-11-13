@@ -1,0 +1,621 @@
+current version of resct is the 18.X
+
+What does Babel do?
+Compiles jsx into javascript
+
+Babel is used to take JSX and convert it into createElement calls
+
+Render() => It renders a React element into the DOM in the supplied container and 
+returns a reference to the component.
+
+What does the webpack do?
+Webpack is a module bundler. The main purpose is to bundle JavaScript files for usage
+ in a browser, yet it is also capable of transforming, bundling, or packaging just 
+about any resource or asset. 
+
+Vdom is a exact copy of dom. dom tree have all of thsese nodes. instead of having dom nodes 
+it simply having basic simple javascript object as nodes inside the virtual dom tre data sructure
+
+
+npx create-react-app myapp1
+yarn start
+
+Webpack is a module bundler. The main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable 
+of transforming, bundling, or packaging just about any resource or asset
+
+index.html => index.js => app.js => returning the function
+
+yarn add axios
+import axios from 'axios';
+
+yarn add morgan
+
+yarn add react-toastify
+
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+<ToastContainer />
+
+yarn add react-router-dom
+import {BrowserRouter,Routes, Route} from 'react-router-dom'
+
+<BrowserRouter>
+      <Routes>
+        <Route path="" element={<Signin/>}/>
+        <Route path="" element={<Signup/>}/>
+        <Route path="" element={<Home/>}/>
+      </Routes>
+    </BrowserRouter>
+
+import { Link, useNavigate } from 'react-router-dom'
+
+btn btn.button-link
+
+state in react => A state in  react is used to store the property values that belong to a component 
+to keeptrack of changes between renders
+
+the state in react can be updated by call to setState method
+these calss are
+Asynchronous in nature
+
+why we should not update the state directly and useState
+it wont rerender the component
+
+What is the purpose of using callbacks in setState?
+The callback function is invoked when setState is finished and the component gets 
+rendered. Since setState() is asynchronous the callback function is used for any 
+post action.
+
+Keys are given to elements in a list in React. These keys are
+Keys used within arrays should be unique among their siblings. However, 
+they don’t need to be globally unique.
+
+
+props in react can _____
+Whether you declare a component as a function or a class, it must never modify its 
+own props. A component cannot update its own props but can update its state and 
+the props of its children.
+
+
+Which of the following statements is correct about props?
+Props in React are read-only data that can be passed and used by the various components into the 
+application. Props are generally a static value, objects, array, or an event handler.
+
+Props are basically kind of global variabal or object.
+anything can be passed as prop in React including event handlers.
+React props can be accessed as an object or destructured.
+props cannot be directly updated.
+
+
+What are two ways data gets handled in react?
+Props and states both provide are used to set default values inside the components. 
+They receive initial value from parent components and set initial value of child components.
+
+
+
+Which of the below is the correct syntax to access a property inside the props in a class components?
+We can access any prop from inside a component’s class using the above syntax. 
+The ‘this.props’ is a kind of global object which stores all of a component's props. Here ‘name’, 
+is the key of this props object.
+
+
+
+Which of the below is the correct syntax to access a property inside the props in a functional components?
+filteredWe can access any prop from inside a component’s class using the above syntax. 
+The ‘this.props’ is a kind of global object which stores all of a component's props. Here ‘name’, 
+is the key of this props object.
+
+why arrow function preffered in react?
+clean syntax and less code
+scope saftey
+to avoid binding this to method
+
+Akash P, [13-03-2022 23:42]
+A class component requires you to extend from React. Component and it must have a render() method returning HTML.
+
+
+    class Demo extends React.Component {
+      render() {
+        return 
+This is a Demo class component!
+;
+      }
+    }
+
+
+How can we pass the information from a component to another component which is not a direct parent, child or sibling?
+Local Storage
+redux
+
+
+which of the following statements is/are incorrect about the props and states.
+
+props are immutable and states are mutable.
+states can only be defined in the components itself.
+props are external and controlled by whatever renders the components whereas states is internal and controlled by the 
+components itself.
+props and states both provide details about the item.
+we cannot use states for drfining default values in a components. Incorrect
+states can be modified by using setState() and props can be modified using setProps() Incorrect
+
+lifeCycle method
+1.constructor
+2.render
+3.componentDidMount => after render
+4.ComponentDidUpdate => after componentDidMount
+5.componentWillunmount => cleanup
+
+
+Q. Which method in a React Component should you override to stop the component from updating?
+This method is called before updating a component and if it returns false it does not update the component.
+shouldComponentUpdate
+
+
+Consider you have a component which has a setTimeout() invoked inside of it, but the component can be removed even if it
+hasn’t completed yet. Which method should we override to stop the timer if and when the component is removed?
+componentWillUnmount() is invoked immediately before a component is unmounted and destroyed
+
+
+Q. In which lifecycle method should you unsubscribe from your real time updates listener?
+componentWillUnmount
+It is called just before unmounting the component and therefore any cleanup is done in this method
+
+React Hooks
+
+useState()
+
+if u want to use state u need to convert functional based component into class based component
+but with the hooks no need of conversion
+
+useState Hook accept only 1 argument
+useState Hook accept return an array 
+1st index is current state and 2nd index is a function which gives power to u to update your current state
+
+using this useState hook basically i can set the state of my functional component
+
+inside my functional component we can use useSate hooks as many time we want
+
+it is basically used for mantaining local state of our functional based component 
+
+What does useState returns?
+useState hook returns the current state value and a function that lets you update it.
+
+How many arguments are passed to useState?
+only 1
+
+useEffect()
+
+making an api call which is totally outside the scope of current function or component or u r doing network call
+useEffect basically serves 3 purpose (componentDidMount,ComponentDidUpdate,componentWillunmount) together combined together
+
+useEffect hook will call very first render and each and every update
+
+
+What is the purpose of useEffect Hook?
+to invoke side effect from within functional component
+The useEffect hook is useful to perform additional work behind the scenes without affecting the appearance of the web page.
+
+
+If we skip the second argument (i.e, dependency array), this useEffect is called after every render.
+It runs before the first render and after every update. But, we can customise this by passing some additional arrays. 
+useEffect runs after every update because every action requires newly updated data.
+
+
+
+Which of the following statement is incorrect about react hooks?
+
+1.Hooks can never be called from inside a loop condition or nested function
+2.hooks should sit at the top-level of your component
+3.we can only call Hooks from React functional component
+4.we can call a hook from regular function WRONG
+
+Don’t call Hooks from regular JavaScript functions. Instead, you can:
+- > Call Hooks from React function components.
+- > Call Hooks from custom Hooks.
+
+By following this rule, you ensure that all stateful logic in a component is clearly visible from its source code.
+
+useRef, useReducer, useLayoutEffect, useCallback are additional hooks which are either variants of the basic ones, or 
+only needed for specific edge cases.
+
+custom hooks
+1.it should starts with use keyword
+2.
+
+A custom Hook is a JavaScript function
+1.Whose name starts with "use"
+2.that may call other hooks
+3.a mechanism to reuse stateful logic
+
+
+rules of hook
+1.we can call a hook multiple time
+2.hooks are just javascript function
+3.we can call a hook at the very top level of our function
+4.we cant call a hook inside if condition or for loop
+5.cant use hook inside a class
+
+Do two components using the same Hook share state?
+No
+Custom Hooks are a mechanism to reuse stateful logic (such as setting up a subscription and remembering the current value), 
+but every time you use a custom Hook, all state and effects inside of it are fully isolated.
+So, it improves the readability and reduces the amount of code
+
+Provides declarative, accessible navigation around your application.
+<Link>
+
+
+As you click around on the different s, the router renders the matching .
+<Router>
+
+
+The ________________ method is used to prevent the browser from executing the default action of the selected element.
+The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event 
+will not occur.For example, clicked anchors will not take the browser to a new URL.
+
+
+function is used to fetch data from the firebase. Document.
+onSnapshot()
+
+
+hooks let you access the parameters of the current route.
+In React Router, we use the word "params" to describe dynamic segments of the URL. useParams  hooks let you access the 
+parameters of the current route.
+
+
+what are the feature of Reactjs?
+Vietual DOM
+server side rendring
+Uni direction data flow or data binding 
+
+what is JSX?
+JSX stands for javascript XML
+makes html easy to understand
+
+what is virtual DOM
+it is a light weight javascript object. which is just copy of real dom
+
+Q working of DOM
+1. wheneever any data changes. the entire UI is re render in virtual dom representation
+2. then the diff between the previous DOM representation and the new one is calculated
+3. Once the calculation is done, the real dom will be updated with only the one thing that have actually changed
+
+
+Q what do u understand from "in react everything is component"
+Components are building blocks of react application ui
+Component split up the entire ui into small independent and reusable pieces
+
+Q explain the purpose of render() function in react
+1. every component must have a render()
+2. it returns single react element which is the representation of native DOM component
+3. HTML elements inside render() must be enclosed inside an enclosing tag like <div>
+4. shuold be a pure function
+
+Q what r Props in React?
+1. short form of properties
+2. read-only
+3. pure or immutable
+4. always passed down from parent to child component
+5. used to render() dynamic data
+
+Q what is state in react and how it is used?
+1. heart of react component
+2. determine component rendering and behaviour 
+3. create interactive and dynamic component
+4. Accessed via this.state()
+5. states are object and mutable
+
+Q diff between state and prop
+    Condition                                      state           prop                    
+Receive initial value from parent component         yes             yes
+set default values inside component                 yes             yes
+set initial values for child component              yes             yes
+parent component can change value                    no             yes
+changes inside component                            yes             no
+changes inside child components                     no              yes
+
+Q How can u update state of a component?
+state can be updated using this.setState()
+
+Q Should we update the state directly?
+No
+
+Q How do you reference a DOM element?
+this.refs
+
+Q what are react hooks?
+Function that let us hook into react state and lifecycle feature from a functional component
+can not be used in class component
+
+Q what is setState()?
+allows us to change state in a react class component
+this is the primary method u should use to update the UI
+does not always update the component immediatly
+
+Q what is useState()
+the useState() is a React Hook that allows to have state variables in functional components
+the useState hook is a special function that takes the initial state as an argument and return an array of two
+entries
+
+
+Q what do u mean by context in react?
+1. the react context API is A way for a React app to effectively produce global variable that can be passed around
+2. this is the alternative to "prop drilling"
+3. A new type of context can be created using React.createContextAPI
+
+Q what do u mean by prop drilling
+???
+
+
+Q diff stateful and stateless
+stateful                                                      stateless
+stores info about components state change in                  calculate the internal state of the component
+memory
+
+have authority to change state                                do not have
+
+contains the knowledge of past, current, and statements       Contains no knowledge
+future changes in state
+
+
+Q what are the diff phases of react components lifecycle?
+getDefaultProps()
+getInitialState()
+constructor()
+componentWillMount() =>  is executed just before rendring both on client and server-side 
+                     => is generally used to show a loader when the component is being loaded or when the data from the server is being fetched.
+
+render()
+componentDidMount() => its run after render method only once basic purpose is calling APIS
+
+
+componentWillReceiveProps() => componentWillRecieveProps() is invoked as soon as the props are recieved from parent class before another render is called
+shouldComponentUpdate() => used for optimizing the performance and to increase the responsiveness
+componentWillUpdate() => manipulate the component just before it receives new props or state used in animation
+render() => render methods are compulsory when we create class component => used for 
+componentDidupdate()
+
+
+componentsWillUnmount()
+------------------------------------------------------
+Monting fase
+1.constructor()
+2.render()
+3.componentDidMount() => its run after render method only once basic purpose is calling APIS
+
+updating face
+1.componentDidupdate() => its triggred just after our component updated , it takes two argument 1st previuos props 2nd prev state
+
+Unmounting face
+1.componentWillUnmount() => for cleanup this methods just basically triggred just before component beign removed from the dom or just before unmounted from the dom
+(cancel api calls, timer)
+---------------------------------------------------------------------------------------
+
+Q Explain the lifecycle methods of React component in details.
+
+constructor()
+
+componentWillMount() is executed just before rendring both on client and server-side
+
+render()
+
+componentDidMount() is executed after first render only on the client side
+
+componentWillRecieveProps() is invoked as soon as the props are recieved from parent class before another render is called
+
+shouldComponentUpdate() returns true or false value based on certain conditions. stop the updation of state
+
+ComponentWillUpdate() is called just before rendering takes place
+
+ComponentWillUnmount() is called after the component is unmounted from the dom. it used to clear up the memory spaces
+
+
+------------------------------------------------------------------------------------------------------------------------
+React packages
+npx create-react-app 
+yarn add react-router-dom@6
+yarn add axios
+yarn add formik
+yarn add yup
+yarn add react-hook-form
+yarn add classnames
+
+import {useNavigate} from "react-router-dom";
+const navigate = useNavigate();
+
+import {useSearchParams} from "react-router-dom";
+const [searchparams, setSearchparams] = useSearchParams();
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+npm install bootstrap
+
+npm install --save styled-components
+yarn add radium
+
+props validation
+yarn i prop-types
+
+yarn i jwt-decode
+yarn add date-fns
+-------------------------------------------------------------
+statefull authentication => Session based Authentication
+
+stateless => using jwt token
+
+State less authentication uses tokens to verify users instead of session Ids. It is considered the most optimal choice of authentication for SPAs
+-------------------------------------------------------------
+The Context in react is used to share data between nested components without passing it as props.
+------------------------------------------------------------------------
+CSS selector in react
+
+style={{color: "red"}}
+
+id={styles["div1"]}
+
+className={`${styles.uppercase} ${styles.cursive}`}
+
+ className={`${styles.btnClose} btn-close`}
+
+prefrence 
+inline < id < class < type or tag
+
+if there r 2 selecter rule are written 1 after another so the latest selector rule will be applied 
+
+
+useEffect(() => {
+    document.title = "Global React";
+  }, []);
+
+
+<img src="/media/Profile-Male-PNG.png" alt="" />  access from html file
+
+background-image: url(../../public/media/header.jpeg); form .css file
+
+<img src= {require("./media/dog9.png")} alt="dog" className="img-fluid" /> from html inside project
+
+
+d-flex flex-coloumn justify-content-center align-items-center
+
+--------------------------------------------------------------
+onChange={(e)=>{
+                setBlacklist(e.target.checked);
+                if(e.target.checked){
+                setActive(false);
+                }
+             }}
+
+// data.status === true ? (data.status = 1) : (data.status = 0);
+// data.blacklist === true ? (data.blacklist = 1) : (data.blacklist = 0);
+
+---------------------------------------------------------
+onChange={(e)=>{handleChange(e)}}
+
+
+--------------------******************************---------------------------------
+Redux 
+1.single source of truth
+2.state is read only
+3.changes to the state are made by pure function only (Reducers)
+4.redus state is pridectable
+5.easy to maintain
+6.persistance of data local storage
+
+
+Which of the following components of Redux describes how should state be changed?
+Actions only describe what happened, but don't describe how the application's state   changes. Reducer specifies how the application's state changes in response to actions sent to the store.
+
+Redux uses a "one-way data flow" app structure
+
+A state tree usually refers to the single state value that is managed by the store and returned by getState().
+
+an action is a plain object that represents an intention to chnage the state
+
+A stateA ___ is an object that holds the application's state tree. is an object that holds the application's state tree.
+
+reducer are functions that handle the actions and return the next state of the application.
+
+pure function
+1.input and output should be same
+2.function should only rely on argument provided to it.
+3.pure function should not perform any side effect
+
+------------------------------------------------------------------
+
+Authentication  is validating your credentials like User Name/User ID and password to verify your identity.
+
+authorization  is the process of verifying that you have access to something, such as gaining access to a resource.
+Let’s assume there’s a user ‘A’ who has written a post. User ‘B’ cannot delete that post, only user ‘A’ can. This is:authorization 
+
+-------------------------------------------------------------------------------------------------
+Q there is any advantage of class component over functional component
+functional components don’t have access to methods like shouldComponentUpdate and PureComponent, it could be a bit of an inconvenience to optimize them for 
+performance.
+-----------------------------------------------------------------------------------------------
+Subject - Confusion over the date mentioned in the relieving date.
+
+To,
+Mubeen Shaik
+Lead- HRD
+Cybage software Pvt. Ltd. Pune
+
+Mubeen as per our previous email conversation. There are lots of matters to be cleared between us.
+
+1. I had clearly mentioned in my resignation letter sent on 31 of December 2021
+that my last working day would be 3 of January 2022. I have worked in Cybage
+for the period of 7 may 2021 to 3 January 2022. I also mentioned my reason that I got an offer in another company. However, I did not get any reply to the
+resignation email I had sent. for the time period (7 may 2021 to 3 january 2022) I worked very well for cybage. You can ask my manager. 
+
+2. I have paid a Rupees of 1,43,638 for the sake of my Relieving letter. However, in the relieving letter as per your record you mentioned my working date in Cybage was from 7 may 2021 to 4 February 2022. However, on the contrary there is no record to say I worked in your company from the date of 4 January 2022 to 4 February 2022. 
+
+3. I have enough proof to show that I started working in the next company from 4 of January 2022. From 4 January 2022 to 4 February 2022. I did not work for
+Cybage, neither did I fill any timesheet did I attend any office meetings for
+Cybage. I have proof from 4 January 2022 that I worked for my next company I
+logged in their system daily. I attended sprint meetings daily. I have filled
+timesheet for my next company. 
+
+4. As per the record your finance department clearly says in email that I am not
+eligible for single day salary for February 2022 month.
+
+5. With no proof at all, you mention that I have worked for your company from the date of 4 January 2022 to 4 February 2022. The finance department on the other hand mentions that I am not eligible for a single day salary in February. These two statements are completely contrary and do not match
+
+6. As mentioned above without any proof you cannot mention any vague date in an important document as the relieving letter.
+
+7. The letter is a very important document for my career. Questions would be
+raised if the letter is not valid. Doubts would be raised about my abilities and
+qualifications. Please change the dates in the relieving letter. otherwise it will ruin my career. 
+
+I am attaching all the screenshots and proof for your reference. In case you need clarification.
+
+Elston I hope your team will reply to my email soon. 
+
+my mobile no 9753290759
+
+Regards,
+Akash Patel 
+
+----------------------------------------------------------------------------
+Rajiv Gandhi nagar munsewara nagar
+sector 6 HRS Layout
+560102
+
+---------------------------------------------------------------------
+Class Component
+to create class level component we should take permission from COMPONENT with the help of super keyword
+
+componentWillMount()
+this life cycle hook will excecute after constructor
+before rendring we can change state here
+this life cycle hook will execute only once
+we can configure global parameter here window width window height
+---------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

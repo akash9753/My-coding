@@ -1,0 +1,17 @@
+1. git status (check status of your current branch)
+2. git add .   (add your current branch changes to stage area(logical area))
+3. git commit -m "changes" (commit your current branch changes to local repository)
+4. git pull origin dev (take latest code from remote dev branch to your local branch)
+   Please check app if u find any conflicts
+5. git push origin <your remote branch name> (push your commit changes to your remote branch))
+
+6. git checkout dev (switch from your local branch to local dev branch)
+7. git pull         (take updated code from remote dev branch)
+8. git merge <your local branch> (merge your local branch commit changes to local dev branch)
+   Please check app if u find any conflicts 
+9. git push (push updated local dev branch cpmmoit changes to remote dev branch)
+
+10. git checkout <your local branch> (switch to your local branch)
+
+-------------------------------------------------------------
+git remote set-url origin git@github.com:User/UserRepo.git
