@@ -1,0 +1,9 @@
+.styleViewBox{
+    
+    width: 400px;
+    height: 400px;
+    background-color: azure;
+}
+.styleViewBox h2{
+    color: blue;
+}
