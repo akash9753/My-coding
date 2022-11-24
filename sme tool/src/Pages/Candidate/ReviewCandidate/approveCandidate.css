@@ -1,0 +1,72 @@
+.font-32 {
+  font: normal normal bold 32px/26px Montserrat;
+}
+.clr-black {
+  color: #252525;
+}
+.font-12 {
+  font: normal normal 12px/26px Montserrat;
+}
+.font-16 {
+  font: normal normal normal 16px/26px Montserrat;
+}
+.font-14 {
+  font: normal normal normal 14px/26px Montserrat;
+}
+.font-20 {
+  font: normal normal normal 20px/26px Montserrat;
+}
+.clr-blue {
+  color: #1f88d5;
+}
+.txt-underline {
+  text-decoration: underline;
+}
+.section-btm-border {
+  border-bottom: 2.5px solid #1f88d5;
+  width: 100%;
+  margin-left: 4px;
+  font-weight: 600;
+  padding-bottom: 4px;
+  color: #1f88d5;
+}
+.download-box {
+  width: 180px;
+  height: 109px;
+  background: #1f88d514 0% 0% no-repeat padding-box;
+  border: 1px solid #1f88d5;
+  border-radius: 6px;
+  opacity: 1;
+}
+.resume-txt {
+  font: italic normal 600 12px/16px Montserrat;
+  letter-spacing: 0px;
+  color: #3e3e3e;
+  opacity: 1;
+}
+.chevron-left {
+  width: 9px;
+  height: 17px;
+}
+.reason-block {
+  width: 566px;
+  height: 122px;
+  position: absolute;
+  top: 184px;
+  left: 635px;
+  padding: 24px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 20px #00000029;
+  opacity: 1;
+}
+.reason-block div {
+  text-align: left;
+  font: normal normal bold 18px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #252525;
+  opacity: 1;
+}
+.reason-block textarea{
+  height: 50px;
+  resize:none;
+}

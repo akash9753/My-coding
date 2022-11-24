@@ -1,0 +1,13 @@
+.check-pos{
+    position: absolute;
+    right: 94px;
+    top: 108px;
+}
+
+@media only screen and (max-width:1400px){
+    .check-pos{
+        position: absolute;
+        right: 94px;
+        top: 125px;
+    }
+   }

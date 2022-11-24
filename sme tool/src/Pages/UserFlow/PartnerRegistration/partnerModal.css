@@ -1,0 +1,70 @@
+.modalWrapper{
+    position: absolute;
+    top: 730px;
+    right: 0;
+    bottom: 0;
+    left: 576px;
+}
+@media only screen and (max-width: 800px){
+    .modalWrapper{
+    position: absolute;
+    left: 104px;
+    }
+}
+@media only screen and  (max-width: 900px){
+    .modalWrapper{
+        position: absolute;
+        left: 146px;
+    }
+}
+@media only screen and  (max-width: 1200px){
+    .modalWrapper{
+        position: absolute;
+        right:200px
+    }
+}
+@media only screen and  (min-width: 1400px){
+    .modalWrapper{
+        position: absolute;
+        left: 1100px;
+    }
+}
+
+.modalChild{
+    margin: 0;
+    padding: 0;
+    width: 600px;
+    height: 147px;
+    background: #15A055;
+    position: relative;
+    animation: fadeInDown 0.8s;
+}
+.btnClose{
+    margin-top: 1.4rem;
+    color: white;
+    font-family: Open Sans, Bold;
+    cursor: pointer;
+}
+.modal_heading_text_partner{
+    color: white;
+    margin-right: 5rem;
+    margin-top: 1rem;
+    font-family: normal normal bold 25px/33px Montserrat;;
+    margin-left: 1rem;
+}
+.modal_main_text_partner{
+    color: white;
+    font-size: 14px;
+    margin-left: 1rem;
+}
+
+@keyframes fadeInDown {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

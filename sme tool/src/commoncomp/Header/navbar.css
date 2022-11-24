@@ -1,0 +1,119 @@
+.logo_head {
+  position: relative;
+}
+.down-arrow {
+  cursor: pointer;
+  position: absolute;
+  left: 105%;
+  top: 98%;
+}
+.profile-section {
+  background: #fff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 130px;
+  width: 154px;
+  border-radius: 3px;
+  opacity: 1;
+  font-size: 12px;
+  position: absolute;
+  top: 79%;
+  left: 88.5%;
+  padding: 7px 0px 0px 0px;
+  animation: fadeInDown 0.8s;
+  z-index: 1;
+}
+
+.profile-section::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 65px;
+  width: 17px;
+  height: 13px;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-section .profile-name {
+  text-align: left;
+  font-family: Montserrat, Tahoma, sans-serif;
+  font: normal normal medium 11px/26px Montserrat, Tahoma, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  padding-left: 6px;
+}
+.bgImg {
+  background-color: #000;
+  background-image: url("../../assets/images/nophoto.svg");
+}
+.profile-section .admin {
+  text-align: left;
+  font: normal normal normal 11px/26px Montserrat, Tahoma, sans-serif;
+  letter-spacing: 0px;
+  color: #1f88d5;
+  opacity: 1;
+  padding-left: 6px;
+}
+.name-section {
+  padding: 2px 6px 0px 7px;
+}
+
+.rounded-circle {
+  float: left;
+}
+.Account-settings {
+  text-align: left;
+  font: normal normal medium 12px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 1;
+  padding: 2px 5px 5px 10px;
+  cursor: pointer;
+}
+.Account-settings a {
+  color: #333333;
+}
+.Account-settings span {
+  padding-right: 10px !important;
+}
+.logout-icon {
+  padding-right: 10px !important;
+}
+
+.notificationCountBoxParent {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+.notificationCountBoxChild {
+  width: 20px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e3194f 0% 0% no-repeat padding-box;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  opacity: 1;
+  z-index: 99;
+  color: #fff;
+  font-size: 11px;
+  position: absolute;
+  left: 9px;
+  top: -11px;
+  font-family: OpenSans-Bold;
+}

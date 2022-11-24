@@ -1,0 +1,436 @@
+.right-panel-title {
+  text-align: left;
+  font: normal normal medium 26px/26px Montserrat !important;
+  font-weight: 400 !important;
+  letter-spacing: 0px;
+  color: #000000 !important;
+  opacity: 1;
+}
+.account-section .error-msg{
+text-align: left;
+color:#e5173f;
+}
+.account-section{
+  width: auto;
+  height: auto;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  /* UI Properties */
+  background: #FFFFFF 0% 0% no-repeat padding-box !important;
+  box-shadow: 0px 3px 20px #00000029;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+
+.account-section .container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0px;
+  margin: 25px auto 0;
+  word-break: break-all;
+  
+}
+
+.account-section .bloc-tabs {
+  display: flex;
+  border-bottom: 1px solid #e3e3e3;
+  border-radius: none;
+}
+.account-section .tabs {
+  padding: 15px 2px 15px 11px;
+  text-align: left;
+  width: 19%;
+  background: #fff;
+  cursor: pointer;
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+/* .account-section .tabs:not(:last-child){
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
+} */
+.content-section{
+  margin-bottom: 20px;
+}
+.account-section .active-tabs  span{
+  /* background: #dddddd6e; */
+  color: #1F88D5 !important;
+  /* border-bottom: 2px solid #1F88D5; */
+}
+
+.account-section .active-tabs::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 53px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 2px;
+  background: rgb(88, 147, 241);
+
+}
+
+
+
+.account-section button {
+  border: none;
+  
+}
+.account-section .content-tabs {
+  flex-grow : 1;
+}
+.account-section .content {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: relative;
+}
+.account-section .content h2 {
+  padding: 0px 0 5px 0px;
+}
+.account-section .content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+/* .account-section .content p {
+  width: 100%;
+  height: 100%;
+} */
+.account-section  .active-content {
+  display: block;
+}
+.buttons button{
+    width: auto !important;
+}
+.upload-photo{
+  background-color: #1F88D5;
+  width: 152px;
+  height: 40px;
+  padding: 8px 5px 0px 7px;
+  color: #fff;
+  border-radius: 5px;
+
+}
+.password-section{
+  padding-bottom: 15px;
+  position: relative;
+}
+.account-img{
+  position: absolute;
+  top: 27%;
+  left: 81%;
+
+}
+.authentication-section h6{
+  font: normal normal normal 20px/29px Montserrat;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+.authentication-section span{
+  padding-right: 10px;
+}
+.authentication-section .lock-img{
+  text-align: center;
+}
+
+.authentication-section .lock-img img{
+  background: #EAF6FF;
+  padding: 12px;
+  border-radius: 5px;
+}
+.account-section .authentication-message{
+  font: normal normal 600 22px/27px Montserrat;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 1;
+  text-align: center;
+  margin-top: 10px;
+}
+.account-section p{
+  text-align: center;
+  font: normal normal normal 16px/22px  !important;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+  padding: 0px 192px;
+  margin-bottom: 0px;
+}
+
+.button-style{
+  background: #1F88D5 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  width: 150px;
+  border-radius: 0px;
+  margin-right: 12px;
+}
+.button-style:hover{
+  background: #1F88D5 0% 0% no-repeat padding-box;
+  color: #fff;
+}
+
+.reset-btn, .reset-btn:hover{
+  border: 1px solid #333333 !important;
+  color: #333333 !important;
+  width: 150px;
+  border-radius: 0px;
+  background-color: #fff !important;
+  border-color: #333333 !important;
+}
+.success-msg{
+  /* background: #E3A224 0% 0% no-repeat padding-box; */
+  background-color: #fbf3e4;
+border-radius: 11px;
+padding: 12px 10px;
+margin: 10px 2px;
+position: relative;
+}
+.success-msg h6{
+  text-align: left;
+  font: normal normal medium 16px/19px Montserrat;
+  letter-spacing: 0px;
+  color:#EA9611;
+}
+.success-msg .close-popup{
+  font-size: 33px;
+  font-weight: bold;
+  transform: matrix(0.73, 0.68, -0.68, 0.73, 0, 0);
+  position: absolute;
+  top:5%;
+  left:95%;
+  cursor: pointer;
+}
+.tabName{
+  text-align: left;
+  font: normal normal medium 12px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #333333;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.upload-image-section{
+  /* margin-bottom: 40px; */
+  position: relative;
+}
+.upload-content{
+  position: absolute;
+  top:12%;
+  left:20%;
+  background-color: #1F88D5 !important;
+  padding: 9px 2px;
+  width: 150px;
+}
+.image-box{
+  height: 146px;
+  width: 129px;
+  /* border: 1px solid #b59e9e; */
+  border-radius: 10%;
+  /* background-image: url('../../../../src/assets/images/img_avatar.png'); */
+  
+}
+.upload-button-sec{
+  border: none !important;
+  position: absolute;
+  top: 34%;
+  left: 36%;
+  background: #1F88D5 0% 0% no-repeat padding-box;
+  font: normal normal medium 12px/26px Montserrat;
+  color: #fff;
+  padding: 8px 32px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.upload-error-msg{
+  color: #e5173f;
+  font-size: 12px;
+  
+ }
+ .upload-error-msg1{
+  text-align: left;
+  font: normal normal medium 12px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #7B7B7B;
+  opacity: 1;
+  position: absolute;
+  top: 33%;
+  left: 22%;
+ }
+ .file{
+  color:#ffff;
+  position: absolute;
+    top: 33%;
+    left: 21%;
+
+ }
+
+.position-btn{
+  position: absolute;
+  top:13%;
+  left:40%;
+  padding: 6px 2px;
+}
+.img-valid{
+  text-align: left;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: medium;
+ position: absolute;
+ top:23%;
+ left:20%;
+  letter-spacing: 0px;
+  color: #7B7B7B;
+  opacity: 1;
+}
+/* .show-password_old{
+  color: #333333;
+  position: absolute;
+  top: 9.5%;
+  left: 45%;
+} */
+
+
+.currentPass{
+  position: relative;
+}
+.show-password_old {
+ color: #333333;
+ position: absolute;
+ top: 17%;
+   left: 92%;
+}
+
+ .show-password_eye{
+   color: #333333;
+   position: absolute;
+   top: 18%;
+   left: 43%;
+ }
+ /* .show-password_eye1{
+   color: #333333;
+   position: absolute;
+   top:22%;
+   left: 45%;
+ } */
+ .newPass{
+   position: relative;
+ }
+
+
+ .show-password_eye1 {
+   position: absolute;
+   color: #333333;
+   top: 18%;
+   left: 92%;
+}
+ /* .show-password3{
+   color: #333333;
+   position: absolute;
+   top:34%;
+   left: 45%;
+ } */
+
+ .confirmPass{
+   position: relative;
+ }
+ .show-password3 {
+   color: #333333;
+   position: absolute;
+   top: 15%;
+   left: 92%;
+}
+
+
+/* iPad pro */
+@media only screen and (max-width:1024px){
+ .show-password_old {
+   color: #333333;
+   position: absolute;
+   top: 13%;
+   left: 84%;
+ }
+}
+
+@media only screen and (max-width:1024px){
+ .show-password_eye1 {
+   color: #333333;
+   position: absolute;
+   top: 16%;
+   left: 84%;
+}
+}
+
+@media only screen and (max-width:1024px){
+ .show-password3 {
+   color: #333333;
+   position: absolute;
+   top: 16%;
+   left: 84%;
+}
+}
+
+
+
+/* iPad */
+@media only screen and (max-width:786px){
+ .show-password_old {
+   color: #333333;
+   position: absolute;
+   top: 13%;
+   left: 86%;
+ }
+}
+
+@media only screen and (max-width:786px){
+ .show-password_eye1 {
+   color: #333333;
+   position: absolute;
+   top: 16%;
+   left: 86%;
+}
+}
+
+@media only screen and (max-width:786px){
+ .show-password3 {
+   color: #333333;
+   position: absolute;
+   top: 14%;
+   left: 86%;
+}
+}
+
+
+/* Iphone pro */
+@media only screen and (max-width:400px){
+ .show-password_old {
+   color: #333333;
+   position: absolute;
+   top: 11%;
+   left: 88%;
+ }
+}
+
+@media only screen and (max-width:400px){
+ .show-password_eye1 {
+   color: #333333;
+   position: absolute;
+   top: 16%;
+   left: 88%;
+}
+}
+
+@media only screen and (max-width:400px){
+ .show-password3 {
+   color: #333333;
+   position: absolute;
+   top: 16%;
+   left: 88%;
+}
+}
+

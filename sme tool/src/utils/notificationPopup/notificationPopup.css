@@ -1,0 +1,178 @@
+.modalWrapper_NotificationPopup {
+  position: absolute;
+  top: 58px;
+  right: 0;
+  bottom: 0;
+  left: 913px;
+}
+
+@media (min-width: 1500px) {
+  .modalWrapper_NotificationPopup {
+    position: absolute;
+    left: 1532px;
+  }
+}
+@media (min-width: 1380px) and (max-width: 1450px) {
+  .modalWrapper_NotificationPopup {
+    position: absolute;
+    left: 1047px;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1380px) {
+  .modalWrapper_NotificationPopup {
+    position: absolute;
+    left: 1015px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+  .modalWrapper_NotificationPopup {
+    position: absolute;
+    left: 925px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1100px) {
+  .modalWrapper_NotificationPopup {
+    position: absolute;
+    left: 673px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .modalWrapper_NotificationPopup {
+    position: absolute;
+    left: 550px;
+  }
+}
+@media (min-width: 700px) and (max-width: 790px) {
+  .modalWrapper_NotificationPopup {
+    position: absolute;
+    left: 495px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+  .modalWrapper_NotificationPopup {
+    position: absolute;
+    top: 97px;
+    left: 12px;
+  }
+}
+
+.modalChild_NotificationPopup {
+  margin: 0;
+  padding: 0;
+  width: 262px;
+  height: 276px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 20px #5d5d5d29;
+  opacity: 1;
+  position: relative;
+  /* animation: fadeInDown 0.8s; */
+  z-index: 99;
+  /* border: 2px solid red; */
+}
+.modalChild_NotificationPopup::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 220px;
+  width: 17px;
+  height: 13px;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+.btnClose_NotificationPopup {
+  margin-top: 1.4rem;
+  color: white;
+  font-family: Open Sans, Bold;
+  cursor: pointer;
+}
+
+/* @keyframes fadeInDown {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+.commonRegCountBox {
+  margin-top: -3px;
+  height: auto;
+  margin-left: 3px;
+}
+.vendorRegCountBox {
+  height: auto;
+  margin-left: 3px;
+}
+.commonRegHeading {
+  font: normal normal 600 12px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 1;
+}
+.commonMainText {
+  font: normal normal normal 12px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #777777;
+  opacity: 1;
+}
+.commonListLink {
+  font: normal normal medium 12px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #1f88d5;
+  opacity: 1;
+}
+.dateAndTimeCandidate {
+  font: normal normal normal 8px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #838383;
+  opacity: 1;
+  display: flex;
+  justify-content: end;
+  margin-right: 19px;
+  height: 25px;
+}
+.dateAndTimeVendor {
+  font: normal normal normal 8px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #838383;
+  opacity: 1;
+  display: flex;
+  justify-content: end;
+  margin-right: 19px;
+  margin-top: -15px;
+  height: 25px;
+}
+.markAllAsReadNoti {
+  text-align: center;
+  font: normal normal normal 10px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #1f88d5;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+.remove_button_style_notification{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.remove_button_style_notification_dull{
+  background: none;
+color: inherit;
+border: none;
+padding: 0;
+font: inherit;
+cursor: pointer;
+outline: inherit;
+color: #72797f;
+}

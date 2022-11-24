@@ -1,0 +1,116 @@
+.heading_approved {
+  font: normal normal normal 20px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #1f88d5;
+  opacity: 1;
+}
+.normal_black_letter_approved {
+  font-style: OpenSans;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #252525;
+  opacity: 1;
+}
+.bold_black_letter_approved {
+  font: normal normal bold 15px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #252525;
+  opacity: 1;
+}
+.normal_blue_letter_approved {
+  font: normal normal normal 16px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #1f88d5;
+}
+.second_section_approved {
+  margin-top: 32px;
+}
+.third_section_approved {
+  margin-top: 35px;
+}
+.fourth_section_approved {
+  margin-top: 15px;
+}
+.fifth_section_approved {
+  margin-top: 15px;
+}
+.sixth_section_approved {
+  margin-top: 40px;
+}
+.heading_blue_line_approved {
+  margin-top: 1rem;
+  border-bottom: 1.5px solid #1f88d5;
+  width: 100%;
+  margin-left: 0px;
+  font-weight: 600;
+  padding-bottom: 4px;
+  color: #1f88d5;
+}
+.button-style-partner-approve {
+  background-color: #1f88d5 0 0 no-repeat padding-box;
+  border-radius: 2px;
+  border-radius: 0;
+  margin-right: 12px;
+  opacity: 1;
+  width: 150px;
+  float: right;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.clr-blue-partner {
+  color: #1f88d5;
+}
+
+.font-12-partner {
+  font: normal normal 12px/26px Montserrat;
+}
+.reason_popup_postion_partner{
+  position: relative;
+}
+.reason-block-partner {
+  text-align: left;
+  font: normal normal bold 18px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #252525;
+  width: 566px;
+  height: 122px;
+  position: absolute;
+  top: 229px;
+  left: 584px;
+  padding: 24px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 20px #00000029;
+}
+.reason-block-partner textarea {
+  height: 50px;
+  resize: none;
+}
+.position_partner {
+  position: relative;
+  right: 56px;
+}
+.tooltipPartner{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.tooltipPartner .tooltipTextPartner{
+  visibility: hidden;
+  width: 220px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  white-space: pre-line;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  top: 26px;
+  z-index: 1;
+  cursor: pointer;
+}
+.tooltipPartner:hover .tooltipTextPartner{
+  visibility: visible; padding: 5px;
+
+}

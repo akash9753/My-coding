@@ -1,0 +1,117 @@
+.blue_Section_New{
+    height: 100vh;
+    background-color: #1f88d5;
+}
+.upper_part_left{
+   height: 20vh;
+}
+.middle_part_left{
+    height: 50vh;
+    
+}
+.lower_part_left{
+    height: 30vh;
+}
+.blue_Section_New_Text{
+    position: relative;
+}
+.blue_Section_New_TextHeading{
+    height: 20vh;
+   
+}
+.blue_Section_New_TextNormal{
+    height: 30vh;
+   
+}
+
+.white_Section_New{
+    height: 100vh;
+    background-color: white;
+}
+.upperPart{
+    height: 33.33vh;
+    position: relative;
+}
+.logo_row_upper{
+    height: 15vh;
+}
+.logo_position_new{
+    display: flex;
+    justify-content: end;
+    margin-top: 1.5rem;
+}
+.supplier_connect_logo_position{
+    display: flex;
+    justify-content: center;
+}
+.middlePart{
+    height: 33.33vh;
+}
+.button_position_both{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.partner_button{
+    background: #1f88d5 0% 0% no-repeat padding-box;
+  width: 200px;
+  height: 36px;
+  border-radius: 2px;
+  opacity: 1;
+}
+.candidate_button{
+    background: #1f88d5 0% 0% no-repeat padding-box;
+    width: 200px;
+    height: 36px;
+    border-radius: 2px;
+    opacity: 1;
+}
+.lowerPart{
+    height: 33.33vh;
+}
+.people_logo_image_pos{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.people_logo_image_size{
+    height: 10rem;
+}
+
+@media only screen and (max-width:600px){
+    .blue_Section_New{
+      display: none;
+   }
+   .candidate_button{
+    margin-top: 1rem;
+   }
+   .partner_button{
+    margin-left: 5rem;
+   }
+   .button_position_both{
+    position: relative;
+    left: 4.5rem;
+   }
+   .head_logo_right_new{
+    margin-bottom: 4rem;
+    margin-right: 2rem;
+   }
+   }
+
+   @media only screen and (max-width:1100px){
+    .partner_button{
+        position: relative;
+        right: 5rem;
+       }
+   }
+   @media screen and (min-device-width: 1400px) and (max-device-width: 2100px) {
+    .partner_button{
+        position: relative;
+        left: 6rem;
+    }
+    .blue_Section_New_TextNormal{
+        position: relative;
+        top: -8rem;
+    }
+    
+   }

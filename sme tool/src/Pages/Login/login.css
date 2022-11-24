@@ -1,0 +1,140 @@
+/* .App {
+  text-align: center;
+} */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.container-block {
+  margin: 32px auto 37px;
+}
+.checkbox_cont {
+  display: flex;
+  justify-content: space-between;
+}
+.checkbox_cont span a {
+  text-decoration: none;
+}
+.frm_grp {
+  margin-bottom: 30px;
+}
+.sub_block {
+  margin-top: 65px;
+}
+.lgn_top {
+  background-color: #1f88d5;
+  height: 147px;
+  padding: 30px;
+}
+.frm_block {
+  padding: 30px;
+}
+.txt-white {
+  color: #ffffff;
+}
+.txt-small {
+  font-size: 12px;
+}
+.sme-head {
+  max-width: 530px;
+  margin: auto;
+}
+.sme-head h3 {
+  text-align: left;
+  font: normal normal bold 30px/39px Montserrat,Tahoma, sans-serif;
+  letter-spacing: 0px;
+  color: #29253b;
+  opacity: 1;
+}
+.lgn_top h2 {
+  text-align: left;
+  font: normal normal bold 40px/53px Montserrat,Tahoma, sans-serif;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+.lgn_top p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+.lbl-txt {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #1F88D5;
+  opacity: 1;
+}
+.txt-box {
+  font-family: "Open Sans", sans-serif;
+  border: 1px solid #c6c7c7;
+  color: #252525;
+}
+.cancel-btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #333333;
+  border: 2px solid #1f88d5;
+  border-radius: 2px;
+  width: 130px;
+  height: 36px;
+  background-color: #ffffff;
+}
+
+.lgn-btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 2px;
+  background-color: #1f88d5;
+  width: 202px;
+  height: 40px;
+  border: none;
+}
+.col-img {
+  position: relative;
+  bottom: 40px;
+  right: 30px;
+}
+.err-msg {
+  color: red;
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+.err-14{
+  font-size: 14px;
+}

@@ -1,0 +1,307 @@
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat'); */
+
+.second-section {
+  height: 100%;
+  background-color: #eaf6ff;
+  padding: 0px 12px;
+}
+
+.table-box table {
+  text-align: center;
+  /* table-layout: fixed; */
+  word-break: break-all;
+  width: 100%;
+}
+.table-box-candiate-list {
+  /* width: 900px; */
+}
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #eaf6ff !important;
+}
+
+.table-panel {
+  float: left !important;
+  background-color: #fff;
+  width: 80%;
+  margin-top: 16px;
+}
+thead tr {
+  border-top: 2px solid #1f88d5;
+  border-bottom: 2px solid #1f88d5;
+  opacity: 1;
+}
+.table-box table > :not(:first-child) {
+  border-top: none;
+}
+.table-space:before {
+  content: "-";
+  display: block;
+  line-height: 1em;
+  color: transparent;
+}
+
+thead tr th {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #262525;
+  opacity: 1;
+}
+tbody tr td {
+  /* font: normal normal medium 12px/26px  Montserrat; */
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  /* font-size: 11px; */
+  letter-spacing: 0px;
+  color: #262525;
+  opacity: 1;
+}
+/* tbody tr:first th {
+  background-color: red;
+} */
+.table thead th:first-child,
+.table tbody td:first-child {
+  text-align: left;
+}
+
+.table thead th:last-child {
+  text-align: center;
+}
+
+tbody tr:first-child td {
+  border-top: 2px solid #1f88d5;
+}
+tbody tr:last-child td {
+  border-bottom: 2px solid #1f88d5;
+}
+table thead tr th:last-child {
+  text-align: center;
+}
+/* table thead tr:nth-child(6){
+color: #1f88d5;
+} */
+/* table tbody tr td:first {
+  color: #1f88d5;
+} */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-striped-bg: none !important;
+}
+.txt-top h4 {
+  margin-bottom: 30px;
+  font: normal normal bold 20px/26px Montserrat, Tahoma, sans-serif;
+  letter-spacing: 0px;
+  color: #252525;
+  opacity: 1;
+}
+.table > :not(caption) > * > * {
+  padding: 12px 8px !important;
+  /* text-align: center; */
+}
+.search-block {
+  margin-bottom: 20px;
+  float: right;
+}
+.icon {
+  cursor: pointer;
+}
+
+.pagination_2 {
+  text-align: end;
+}
+.page_num {
+  outline: none;
+  background-color: #1f88d5;
+  border-radius: 1px;
+}
+.arrowFont {
+  color: #1f88d5;
+}
+.custom_btn {
+  background-color: #dddd;
+  border: none;
+  border-radius: 1px;
+  margin: 1px;
+  padding: 2px 8px;
+  font-size: 14px;
+}
+.active {
+  background-color: #1f88d5;
+  color: #fff;
+}
+.custom_btn:hover {
+  background-color: #1f88d5;
+  color: #fff;
+  border: none;
+  border-radius: 1px;
+  margin: 1px;
+  padding: 2px 8px;
+  font-size: 14px;
+}
+.custom_btn:active,
+.custom_btn:visited {
+  background-color: #1f88d5;
+  color: #fff;
+}
+.showing-space {
+  padding-right: 5px;
+}
+.main_pagination select {
+  width: 50px !important;
+  border: 1px solid #c7c7c7;
+  border-radius: 4px;
+}
+.loader-div {
+  width: auto;
+  position: sticky;
+  left: 40%;
+  top: 50%;
+  font: normal normal bold 12px/26px Montserrat, Tahoma, sans-serif;
+  letter-spacing: 0px;
+  color: #262525;
+  opacity: 1;
+  /* display: none; */
+}
+
+.table-icon {
+  cursor: pointer;
+}
+/* tr th:nth-child(7){
+  color:#1f88d5; 
+  font-weight: bold;
+ }
+  */
+/* .sort-desc {
+  box-shadow: none !important;
+  
+}
+.sort-desc:before {
+    content: "▼";
+    float: right;
+  }
+  .sort-asc {
+    box-shadow: none !important;
+  }
+  .sort-asc:before {
+      content: "▲";
+      float: right;
+    }
+
+ */
+
+/* table.dataTable thead .sorting:before, 
+table.dataTable thead .sorting_asc:before, 
+table.dataTable thead .sorting_asc_disabled:before,
+ table.dataTable thead .sorting_desc:before, 
+ table.dataTable thead .sorting_desc_disabled:before{
+ 
+ 
+     right: 0.5rem;
+    left: auto;
+    content: "\f0dc";
+   font-family: "Material Design Icons"; 
+    font-size: 1rem;
+    top: 12px;
+	
+	}
+
+  table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, 
+	table.dataTable thead .sorting_asc_disabled:after, 
+	table.dataTable thead .sorting_desc:after, 
+	table.dataTable thead .sorting_desc_disabled:after {
+    right: 0.5em;
+    left: auto;
+    content: "\f035d";
+    font-family: "Material Design Icons";
+    top: 18px;
+    font-size: 1rem;
+} */
+/* .check::before{
+  content: "\f035d";
+  font-size: 1rem;
+} */
+
+/* .dataTable{
+  width: 1010px;
+  overflow-x: scroll; 
+} */
+
+.table-container {
+  overflow: auto;
+  width: 100%;
+}
+
+/* th {
+  position: sticky;
+  top: 0;
+  background: white;
+}  */
+
+/* table, th, td {
+  border-collapse: collapse;
+}
+
+
+.ea_table tbody tr:nth-child(2n+1) {
+  background: #f8f8f8;
+} */
+
+.profession {
+  font-weight: normal !important;
+  font-size: 12px !important;
+}
+.profession .showAll {
+  border: none;
+  background: none;
+  color: #1f88d5 !important;
+}
+.profession .showAll:hover {
+  border: none;
+  background: none;
+  color: #666666 !important;
+}
+
+.action-col {
+  width: 10% !important;
+}
+
+.table-box-container {
+  position: relative;
+}
+
+.table-container {
+  position: relative;
+}
+.blacklist-col {
+  color: red !important;
+}
+.register-action-box {
+  width: 67px;
+  height: 26px;
+  display: inline-block;
+  background: #1f88d5 0% 0% no-repeat padding-box;
+  cursor: pointer;
+  border: 1px solid #1f88d5;
+  border-radius: 6px;
+  opacity: 1;
+}
+.register-action-box:hover{
+  width: 67px;
+  height: 26px;
+  display: inline-block;
+  background: #75b9ea 0% 0% no-repeat padding-box;
+  cursor: pointer;
+  border: 1px solid #1f88d5;
+  border-radius: 6px;
+  opacity: 1;
+}
+.register-action-box div{
+font: normal normal bold 11px/26px Montserrat;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+}

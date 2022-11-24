@@ -1,0 +1,203 @@
+@media only screen and (min-device-width: 1460px) and (max-device-width: 2048px) {
+  
+    .main:nth-child(4) .card .title {
+     margin-top: 26px;
+    }
+  }
+ 
+ 
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+     .left-panel{
+         width: 100%;
+         margin-left: 0px !important;
+     }
+     .right-panel{
+         width:100% !important;
+         padding: 10px 20px !important;
+     }
+     .right-panel h3,.right-panel h5{
+         margin-top: 10px !important;
+     }
+     .logo_white {
+        width: 200px;
+        margin-left: 20px !important;
+        margin-right: 103px;
+       
+    }
+    .logo_head{
+        padding: 2px 3px 8px 0px;
+    }
+     .dashboard{
+        width: 100% !important;
+        padding-left:20px !important;
+        padding-right:20px !important;
+    }
+    .flex-column{
+        height: auto!important;
+    }
+     .navbar-nav {
+        margin-right: 0px !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+   .navbar-nav li{
+        width: 100%;
+        text-align: center;
+        border-bottom: 0.5px solid #90b5e6;
+  
+    }
+   .navbar-toggler{
+     padding: 0px;
+   }
+  .accordion-button .arrow-icon-right{
+        position: absolute !important;
+        top: 28% !important;
+        left: 85% !important;
+  }
+  .report-cards{
+    width: 100% !important;
+}
+  .table-panel{
+     width: 100% !important;
+  }
+  .footer  .navbar-nav li{
+     border-bottom: none;
+  }
+ .justify-content-between-footer{
+     margin-right: 0px !important;
+ }
+ .search-block{
+     float: none !important;
+ }
+ .table-container{
+     width: 100%;
+     overflow-x: auto;
+ }
+ 
+ .table-box table{
+     word-break: normal !important;
+ }
+ .w-25{
+     width: auto !important;
+ }
+ .ps-0{
+     padding: left 12px !important;
+     margin-top: 12px;
+ }
+ .nda .res-padding{
+     padding-left: 10px !important;
+ }
+ .intial_section{
+     position: relative;
+ }
+ .status-position{
+     position: absolute;
+     top:55%;
+     left:73%;
+ }
+ .fileName{
+     padding: 0px!important;
+ }
+ .project-delete-icon{
+    position: absolute;
+    top:2%;
+    left:69%;
+}
+.align-input {
+    position: absolute !important;
+    top: 74% !important;
+    left: -20% !important;
+}
+.ps-0 {
+    padding-left: 12px !important;
+}
+.res-file-position{
+    position: absolute !important;
+    top: 93% !important;
+    left: -26% !important;
+}
+/* .table-container .table thead th:nth-child(2){
+    background-color: red;
+    width: 2%!important;
+    text-overflow: ellipsis;
+} */
+.table-box table {
+    width: 1200px !important;
+}
+/* .table-container .table thead th:nth-child(1){
+    width: 10%!important;
+    text-overflow: ellipsis;
+    
+} */
+.table-box table {
+    text-align: center;
+    /* table-layout: fixed; */
+    word-break: break-all !important;
+}
+
+ }
+ 
+ @media only screen and (min-device-width: 480px) and (max-device-width: 800px) {
+    .table-box-candiate-list {
+        width: 1500px;
+      }
+      
+    .table-box-company-list {
+        width: 800px;
+      }
+    .left-panel{
+        width: 100% !important;
+        margin-left:0px;
+    }
+    .flex-column{
+        height: auto !important;
+    }
+    .accordion-button .arrow-icon-right{
+        position: absolute !important;
+        top: 28% !important;
+        left: 92% !important;
+    }
+     .dashboard{
+         width: 100% !important;
+      
+     }
+     .navbar-toggler-icon{
+         display: none;
+     }
+   .right-panel{
+         width: 100% !important;
+     }
+       .table-panel{
+         width: 100% !important;
+     }
+     .report-cards{
+         width: 100% !important;
+     }
+     
+     /* .project-delete-icon{
+        
+         position: absolute;
+         top:10%;
+         left:90%;
+     } */
+     .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+    .table-box table{
+        width: 1200px;
+    }
+     .footer .navbar-nav{
+        flex-direction: row !important;
+        margin-right: 130px !important;
+     }
+     
+
+ }
+ /* @media only screen and (min-device-width: 720px) and (max-device-width: 1400px) {
+    .dashboard{
+         width: 100%;
+      
+     }
+ } */

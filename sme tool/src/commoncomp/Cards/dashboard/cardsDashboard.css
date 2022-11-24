@@ -1,0 +1,37 @@
+.card{
+    /* width:168px; */
+    margin-left: 0px;
+   margin-right: 0px;
+}
+  .main:nth-child(1) .card{
+    background: linear-gradient(45deg,#E3194F,#aa3655);
+    border-radius: 6px;
+    opacity: 1;
+  }
+  .main:nth-child(2) .card{
+    background: transparent linear-gradient(207deg, #0053F0 0%, #195396 100%) 0% 0% no-repeat padding-box;    border-radius: 6px;
+    opacity: 1;
+  }
+  .main:nth-child(3) .card {
+    background: transparent linear-gradient(207deg, #773FB7 0%, #643EE2 100%) 0% 0% no-repeat padding-box;    border-radius: 6px;
+    opacity: 1;
+  }
+  .main:nth-child(3) .card .title{
+      margin-top: 28px;
+  }
+  .main:nth-child(3) .card .project-content{
+    margin-bottom: 4px;
+}
+.main:nth-child(4) .card .title{
+    margin-top: 5px;
+}
+.main:nth-child(4) .card .project-content{
+  margin-bottom: 4px;
+}
+  .main:nth-child(4) .card {
+    background: transparent linear-gradient(207deg, #5C00F0 0%, #3C61C4 100%) 0% 0% no-repeat padding-box;    opacity: 1;
+  }
+  .main:nth-child(5) .card {
+    background: transparent linear-gradient(207deg, #3993d5 0%, #41b986  100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
