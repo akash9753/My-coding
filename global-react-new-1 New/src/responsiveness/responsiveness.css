@@ -1,0 +1,50 @@
+/* html{
+    font-size: 30px ;
+} */
+
+
+#div1{
+    background-color: aqua;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+/* for Deskotop */
+/* @media screen and (max-width:900px){
+    #div1{
+        background-color: rgb(107, 57, 223);
+        width: 80%;
+        padding: 5px;
+        border: 1px solid rgb(234, 93, 220);
+    }
+}
+
+@media screen and (max-width:600px){
+    #div1{
+        background-color: red;
+        width: 100%;
+        padding: 5px;
+        border: 1px solid rgb(6, 231, 55);
+    }
+} */
+
+
+/* for mobile */
+@media screen and (min-width:600px){
+    #div1{
+        background-color: rgb(107, 57, 223);
+        width: 80%;
+        padding: 5px;
+        border: 1px solid rgb(234, 93, 220);
+    }
+}
+
+@media screen and (min-width:900px){
+    #div1{
+        background-color: rgb(226, 43, 23);
+        width: 60%;
+        padding: 5px;
+        border: 1px solid rgb(57, 186, 222);
+    }
+}

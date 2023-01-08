@@ -22,6 +22,7 @@ const CardTour = ({
   tags,
   _id,
   name,
+  likes
 }) => {
   const { user } = useSelector((state) => ({ ...state.auth }));
   const userId = user?.result?._id 
@@ -35,29 +36,29 @@ const CardTour = ({
   };
 
   const Likes = () => {
-    // if (likes.length > 0) {
-    //   return likes.find((like) => like === userId) ? (
-    //     <>
-    //       <MDBIcon fas icon="thumbs-up" />
-    //       &nbsp;
-    //       {likes.length > 2 ? (
-    //         <MDBTooltip
-    //           tag="span"
-    //           title={`You and ${likes.length - 1} other people likes`}
-    //         >
-    //           {likes.length} Likes
-    //         </MDBTooltip>
-    //       ) : (
-    //         `${likes.length} Like${likes.length > 1 ? "s" : ""}`
-    //       )}
-    //     </>
-    //   ) : (
-    //     <>
-    //       <MDBIcon far icon="thumbs-up" />
-    //       &nbsp;{likes.length} {likes.length === 1 ? "Like" : "Likes"}
-    //     </>
-    //   );
-    // }
+    if (likes.length > 0) {
+      return likes.find((like) => like === userId) ? (
+        <>
+          <MDBIcon fas icon="thumbs-up" />
+          &nbsp;
+          {likes.length > 2 ? (
+            <MDBTooltip
+              tag="span"
+              title={`You and ${likes.length - 1} other people likes`}
+            >
+              {likes.length} Likes
+            </MDBTooltip>
+          ) : (
+            `${likes.length} Like${likes.length > 1 ? "s" : ""}`
+          )}
+        </>
+      ) : (
+        <>
+          <MDBIcon far icon="thumbs-up" />
+          &nbsp;{likes.length} {likes.length === 1 ? "Like" : "Likes"}
+        </>
+      );
+    }
     return (
       <>
         <MDBIcon far icon="thumbs-up" />

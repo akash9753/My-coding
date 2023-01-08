@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "fname": "akash",
+      "lname": "patel",
+      "email": "akash9753@gmail.com",
+      "gender": "male",
+      "mobile": "9753290759",
+      "state": "delhi",
+      "id": 1
+    },
+    {
+      "fname": "akashpppp",
+      "lname": "patelppp",
+      "gender": "other",
+      "mobile": "9753290759",
+      "email": "akash9753@gmail.com",
+      "state": "Jharkhand",
+      "id": 3
+    },
+    {
+      "fname": "akash",
+      "lname": "patel",
+      "gender": "other",
+      "mobile": "9753290759",
+      "email": "akash9753@gmail.com",
+      "state": "Jharkhand",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+
+
+#bodyHeader {
+  height: 65vh;
+  opacity: 0.8;
+  background-image: url(../../public/media/header.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 0.5rem;
+}
+
+.HorizontalList {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+
+.HorizontalList li {
+  display: inline-block;
+  margin: 10px 12px 12px 0px;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+.HorizontalList li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navMenu li a {
+  transition: color 0.5s, border-bottom 4s;
+}
+
+.navMenu li a:hover {
+  color: lightgray;
+  border-bottom: 1px solid white;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+/* Name and social Icons */
+
+#name-social-container {
+  margin-top: 20vh;
+}
+
+#my-name {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.socialIcons li a i {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 50%;
+}
+
+.socialIcons li a i:hover {
+  box-shadow: 0px 0px 6px 4px yellowgreen;
+}
+
+main {
+  width: 100%;
+  /* border: 2px solid green; */
+  margin: 0px;
+  /* padding: 25px; */
+  font-family: sans-serif;
+  font-size: 25px;
+}
+
+section {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 2px solid black; */
+
+}
+
+
+section:nth-child(2n) {
+  background-color: white;
+}
+
+section:nth-child(2n+1) {
+  background-color: white;
+}
+
+section:target{
+  background-color: cyan;
+}
+
+.sectionHeading{
+  width: auto;
+  padding: 20px 10px 10px;
+  font-weight: 400;
+  /* border: 2px solid red; */
+}
+.sectionHeading span{
+      font-size: 40px;
+      color: #2857a4;
+      display: inline-block;
+      padding-top: 10px;
+      margin-right: 0.5rem;
+      /* border: 2px solid rgb(14, 239, 100); */
+}
+
+/* About Section ----------------------------*/
+
+#about {
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+#myImage {
+  height: 12rem;
+  width: 12rem;
+  margin: auto;
+  margin-top: -17vh;
+}
+
+#myImage img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 1px 1px 10px 2px lightgrey;
+}
+
+#about-para {
+  padding: 10px;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  color: grey;
+  line-height: 28px;
+  font-weight: 100;
+  font-size: 1.1rem;
+}
+
+
+/* Skills Section ----------------------------*/
+
+#skillsDisplay {
+  width: 70%;
+  height: auto;
+  /* border: 2px solid rgb(187, 13, 13); 	 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+
+/* Common Margin Classes */
+.mb75px {
+  margin-bottom: 75px;
+}
+
+.skillProgress{
+     width: 7rem;
+     height: 1.4rem;
+     background-color: lightgray;
+     border-radius: 0.8rem;
+     /* border: 2px solid black; */
+}
+
+.skillProgress>div{
+  border-radius: 20px 0px 0px 20px;
+}
+
+.skillName span{
+  color: white;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+ /* .mbBlue{
+  background-color: #2857a4;
+} */
+
+ 
+
+.htmlPercent{
+  width: 85%;
+  height: inherit;
+  background-color: #e855ed;
+} 
+
+.cssPercent{
+  width: 75%;
+  height: inherit;
+  background-color: #8bf38c;
+} 
+
+.javascriptPercent{
+  width: 65%;
+  height: inherit;
+  background-color: #2857a4;
+} 
+
+/* Work Experience------------------------------------------ */
+.timeline{
+  position: relative;
+  width: 75%;
+  border: 2px solid black;
+}
+.timelineBox{
+  position: relative;
+  margin: 5px;
+  width: 40%;
+  margin-left: 5%;
+  min-height: 140px;
+  border: 2px solid black;
+}
+
+.timelineBox:nth-child(2n){
+  margin-left: 53%;
+}
+
+.timelineBox:nth-child(2n+1):after{
+  content: '';
+  position: absolute;
+  top: 30%;
+  right: -14.5%;
+  border-radius: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: red;
+  z-index: 1;
+}
+
+.timelineBox:nth-child(2n):after{
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: -8.5%;
+  border-radius: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: red;
+  z-index: 1;
+}
+
+.timelineDevider{
+  position: absolute;
+  height: 75%;
+  width: 0;
+  border: 3px dashed #0096fa6b;
+  top: 10%;
+  left: 50%;
+}
+
+.timelineTraveller{
+   position:sticky;
+   top: 25%;
+   transform: rotate(90deg);
+   z-index: 2;
+}

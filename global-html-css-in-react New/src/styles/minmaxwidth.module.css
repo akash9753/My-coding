@@ -1,0 +1,11 @@
+ #div1{
+        height: 200px;
+        width: 200px;
+        /* min-width: 150px;
+        max-width: 150px; */
+        background-color: cyan;
+        border: 2px solid rebeccapurple;
+        /* overflow: hidden; */
+        /* overflow: scroll; */
+        overflow: auto;
+}

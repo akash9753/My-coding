@@ -1,0 +1,54 @@
+.pTagColorChange p{
+    color: blue;
+}
+h1{
+    font-size: 40px;
+}
+h1 p{
+    font-family: sans-serif;
+}
+.uppercase h4{
+    text-transform: uppercase;
+}
+.cursive h4{
+    font-family: cursive;
+}
+#blog-desc{
+    color: #314831;
+}
+#blog-title:hover{
+    color: orange;
+}
+
+/* Aside Section */
+
+aside{
+    display: inline-block;
+    width: 21%;
+    vertical-align: top;
+    margin-left: 4%;
+}
+
+.widget{
+    border-top: 4px solid black;
+}
+
+.widget input{
+    display: block;
+    background-color: #F7F7F7;
+    margin-bottom: 15px;
+    padding: 4px;
+    color: black;
+    font-size: 0.7;
+}
+
+.widget button[type="submit"]{
+    font-size: 0.7rem;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+main{
+    width: 70%;
+    display: inline-block;
+}

@@ -1,0 +1,270 @@
+#container{
+    height: auto;
+    width: 75vh;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: nowrap; */
+    /* flex-wrap: wrap; */
+    flex-wrap: wrap-reverse;
+}
+#container div{
+    height: 200px;
+    width: 200px;
+}
+
+#div1{
+    background-color: cyan;
+    /* order: 1; */
+}
+#div2{
+    background-color: red;
+    /* order: 0; */
+}
+#div3{
+    background-color: grey;
+    /* order: 5; */
+}
+#div4{
+    background-color: brown;
+    /* order: -1; */
+}
+#div5{
+    background-color: orange;
+    /* order: -1; */
+}
+
+#containerG{
+    height: 500px;
+    width: 500px;
+    background-color: lightgray;
+    display: flex;
+    /* flex-direction: row;  by default it is in row direction*/
+}
+
+#containerG div{
+    height: 200px;
+    width: 200px;
+}
+
+#div1G{
+    background-color: cyan;
+    /* order: 1; */
+    flex-grow: 4;
+}
+#div2G{
+    background-color: red;
+    /* order: 0; */
+    flex-grow: 1;
+}
+
+#containerS{
+    height: 500px;
+    width: 300px;
+    background-color: lightgray;
+    display: flex;
+    /* flex-direction: row;  by default it is in row direction*/
+}
+
+#containerS div{
+    height: 200px;
+    width: 200px;
+}
+
+#div1S{
+    background-color: cyan;
+    /* order: 1; */
+    /* flex-grow: 4; */
+    flex-Shrink: 4;
+}
+#div2S{
+    background-color: red;
+    /* order: 0; */
+    /* flex-shrink: 1; */
+    flex-shrink: 1;
+}
+
+
+#containerG{
+    height: 500px;
+    width: 500px;
+    background-color: lightgray;
+    display: flex;
+    /* flex-direction: row;  by default it is in row direction*/
+}
+
+#containerG div{
+    height: 200px;
+    width: 200px;
+}
+
+#div1G{
+    background-color: cyan;
+    /* order: 1; */
+    flex-grow: 4;
+}
+#div2G{
+    background-color: red;
+    /* order: 0; */
+    flex-grow: 1;
+}
+
+#containerJSrow{
+    height: 500px;
+    width: 500px;
+    background-color: lightgray;
+    display: flex;
+    /* flex-direction: row;  by default it is in row direction*/
+    /* justify-content: flex-start; */
+    justify-content: flex-end;
+    /* justify-content: space-evenly; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: stretch; */
+
+}
+
+#containerJSrow div{
+    height: 100px;
+    width: 100px;
+}
+
+#div1JSrow{
+    background-color: cyan;
+}
+#div2JSrow{
+    background-color: red;
+}
+#div3JSrow{
+    background-color: grey;
+}
+
+#containerJScolumn{
+    height: 500px;
+    width: 500px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: row;  by default it is in row direction*/
+    justify-content: flex-start;
+    /* justify-content: flex-end; */
+    /* justify-content: space-evenly; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: stretch; */
+
+}
+
+#containerJScolumn div{
+    height: 100px;
+    width: 100px;
+}
+
+#div1JScolumn{
+    background-color: cyan;
+}
+#div2JScolumn{
+    background-color: red;
+}
+#div3JScolumn{
+    background-color: grey;
+}
+
+#containerAlignItemRow{
+    height: 500px;
+    width: 500px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    align-items: end;
+    /* align-items: center; */
+    /* align-items: stretch;  */
+    /* use auto in height for stretch effect  */
+    /* align-items: baseline; */
+}
+
+#containerAlignItemRow div{
+    /* height: auto;
+    max-height: 400px; */
+    height: 100px;
+    width: 100px;
+}
+
+#div1AlignItemRow{
+    background-color: cyan;
+    /* margin: 10px; */
+}
+#div2AlignItemRow{
+    background-color: red;
+    /* margin: 20px; */
+}
+#div3AlignItemRow{
+    background-color: grey;
+    /* margin: 50px; */
+}
+
+#containerAlignItemColoumn{
+    height: 500px;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    align-items: end;
+    align-items: center;
+    /* align-items: stretch;  */
+    /* use auto in height for stretch effect  */
+    /* align-items: baseline; */
+}
+
+#containerAlignItemColoumn div{
+    /* height: auto;
+    max-height: 400px; */
+    height: 100px;
+    width: 100px;
+}
+
+#div1AlignItemColoumn{
+    background-color: cyan;
+    /* margin: 10px; */
+}
+#div2AlignItemColoumn{
+    background-color: red;
+    /* margin: 20px; */
+}
+#div3AlignItemColoumn{
+    background-color: grey;
+    /* margin: 50px; */
+}
+
+#containerJCAI{
+    height: 500px;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#containerJCAI div{
+    /* height: auto;
+    max-height: 400px; */
+    height: 100px;
+    width: 100px;
+}
+
+#div1JCAI{
+    background-color: cyan;
+}
+#div2JCAI{
+    background-color: red;
+}
+#div3JCAI{
+    background-color: grey
+}

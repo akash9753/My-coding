@@ -1,0 +1,7 @@
+.horizontal li{
+   display: inline;
+   color: red;
+   font-size: large;
+   margin-right: 8px;
+   text-align: center;
+}
