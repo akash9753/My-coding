@@ -18,14 +18,15 @@ import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
 import { Link } from "react-router-dom";
+
 const Container = styled.div`
   flex: 1;
-  background-color: #202020;
+  background-color: ${({ theme }) => theme.bgLighter};
   height: 100vh;
-  color: white;
+  color: ${({ theme }) => theme.text};
   font-size: 14px;
   position: sticky;
-  top:0;
+  top: 0;
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: auto;
@@ -45,17 +46,20 @@ const Img = styled.img`
 `;
 
 const Item = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    cursor: pointer;
-    padding:7.5px 0px;
-`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  padding: 7.5px 0px;
+  &:hover{
+    background-color: ${({ theme }) => theme.soft};
+  }
+`;
 const Hr = styled.hr`
-    margin: 15px 0px;
-    border: 0.5px solid #373737;
-`
-const Login = styled.div``
+  margin: 15px 0px;
+  border: 0.5px solid ${({ theme }) => theme.soft};
+`;
+const Login = styled.div``;
 
 const Button = styled.button`
   padding: 5px 15px;
@@ -69,20 +73,27 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   gap: 5px;
-`
+`;
+const Title = styled.h2`
+  font-size: 14px;
+  font-weight: 500;
+  color: #aaaaaa;
+  margin-bottom: 20px;
+`;
 
-
-const Menu = () => {
+const Menu = ({ darkMode, setDarkMode }) => {
   return (
     <Container>
       <Wrapper>
-        <Logo>
-        <Img src={Dnaob} />
-          Dnaob
-        </Logo>
+        <Link to="/" style={{ textDecoration: "none", color:"inherit"}}>
+          <Logo>
+            <Img src={Dnaob} />
+            Dnaob
+          </Logo>
+        </Link>
         <Item>
-            <HomeIcon/>
-            Home
+          <HomeIcon />
+          Home
         </Item>
         <Item>
           <ExploreOutlinedIcon />
@@ -104,15 +115,15 @@ const Menu = () => {
         <Hr />
         <Login>
           Sign in to like videos, comment, and subscribe.
-          {/* <Link to="signin" style={{textDecoration:"none"}}> */}
-            <Button>
-              <AccountCircleOutlinedIcon />
-              SIGN IN
-            </Button>
-          {/* </Link> */}
+          <Link to="signin" style={{textDecoration:"none"}}>
+          <Button>
+            <AccountCircleOutlinedIcon />
+            SIGN IN
+          </Button>
+          </Link>
         </Login>
         <Hr />
-        {/* <Title>BEST OF LAMATUBE</Title> */}
+        <Title>BEST OF DNAOB</Title>
         <Item>
           <LibraryMusicOutlinedIcon />
           Music
@@ -150,10 +161,10 @@ const Menu = () => {
           <HelpOutlineOutlinedIcon />
           Help
         </Item>
-        {/* <Item onClick={() => setDarkMode(!darkMode)}>
+        <Item onClick={() => setDarkMode(!darkMode)}>
           <SettingsBrightnessOutlinedIcon />
           {darkMode ? "Light" : "Dark"} Mode
-        </Item> */}
+        </Item>
       </Wrapper>
     </Container>
   );
