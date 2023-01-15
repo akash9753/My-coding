@@ -51,7 +51,7 @@ const More = styled.div`
     display: flex;
     margin-top: 10px;
     font-size: 12px;
-    color: color: ${({theme})=>theme.textSoft};
+    color:  ${({theme})=>theme.textSoft};
 `
 
 const Links = styled.span`
