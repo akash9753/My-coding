@@ -5,6 +5,10 @@ const VideoSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    title:{
+        type: String,
+        required: true,
+    },
     desc:{
         type: String,
         required: true,
@@ -19,7 +23,7 @@ const VideoSchema = new mongoose.Schema({
     },
     views:{
         type: Number,
-        required: 0,
+        default: 0,
     },
     tags:{
         type:[String],

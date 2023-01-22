@@ -2,6 +2,7 @@ import bcrypt from "bcryptjs"
 import User from "../models/User.js"
 import { createError } from "../error.js"
 import jwt from "jsonwebtoken"
+
 export const signup = async (req,res,next)=>{
     console.log(req.body);
     try{
@@ -17,15 +18,16 @@ export const signup = async (req,res,next)=>{
 }
 
 export const signin = async (req,res,next)=>{
+    
     try{
-       const user = await User.findOne({name:req.body.name})
-       console.log(`user`,user);
+       const user = await User.findOne({email:req.body.email})
+       
        if(!user) return next(createError(404,"User not found"))
 
        const isCorrect = await bcrypt.compare(req.body.password, user.password)
        if(!isCorrect) return next(createError(400,"Wrong credential"))
 
-       const token = jwt.sign({id:user._id}, process.env.JWT)
+       const token = jwt.sign({id:user._id}, process.env.JWT_Secret)
 
        const {password, ...others} = user._doc
 
