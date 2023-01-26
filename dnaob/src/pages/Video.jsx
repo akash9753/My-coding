@@ -114,7 +114,7 @@ const Subscribe = styled.button`
 
 const Video = () => {
 
-  const {currentUser} = useSelector((state)=>state.user)
+  // const {currentUser} = useSelector((state)=>state.user)
   const {currentVideo} = useSelector((state)=>state.video)
   console.log(`currentVideo`,currentVideo);
   const dispatch = useDispatch();
