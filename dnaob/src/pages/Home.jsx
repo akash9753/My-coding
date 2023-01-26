@@ -9,28 +9,36 @@ const Container = styled.div`
   flex-wrap: wrap;
 `;
 
-const Home = () => {
+const Home = ({ type }) => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/videos/random");
+        const res = await axios.get(`/videos/${type}`);
         setVideos(res.data);
         console.log(res.data);
+        
       } catch (err) {
         console.error(`fetchVideos api error`, err);
       }
     };
     fetchVideos();
-  }, []);
+  }, [type]);
+  // useEffect(() => {
+  //   const fetchVideos = async () => {
+  //     const res = await axios.get(`/videos/${type}`);
+  //     setVideos(res.data);
+  //   };
+  //   fetchVideos();
+  // }, [type]);
 
   return (
     <Container>
       {videos.map((video) => {
         return (
           <div key={video._id}>
-            <Card />
+            <Card key={video._id} video={video} />
           </div>
         );
       })}

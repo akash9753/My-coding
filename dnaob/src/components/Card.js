@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import {format} from "timeago.js";
+import axios from "axios";
 
 const Container = styled.div`
   width: ${(props)=>props.type !== "sm" && "360px"};
@@ -50,17 +52,33 @@ font-size: 14px;
 color: ${({theme})=> theme.textSoft};
 `
 
-const Card = ({type}) => {
+const Card = ({type,video}) => { 
+
+  const [channel, setChannel] = useState({});
+
+  useEffect(() => {
+    const fetchVideos = async () => {
+      try {
+        const res = await axios.get(`/users/find/${video.userId}`);
+        setChannel(res.data);
+        console.log(res.data);
+      } catch (err) {
+        console.error(`fetchVideos api error`, err);
+      }
+    };
+    fetchVideos();
+  }, [video.userId]);
+
   return (
-    <Link to="/video/test" style={{textDecoration:"none"}}>
+    <Link to={`/video/${video._id}`} style={{textDecoration:"none"}}>
     <Container type={type}>
-      <Image type={type} src="https://img.freepik.com/premium-psd/music-landing-page-design-template_23-2149081194.jpg?size=626&ext=jpg" />
+       <Image type={type} src={video.imgUrl} />  
       <Details type={type}>
-        <ChannelImage type={type} src="https://yt3.ggpht.com/yti/APfAmoE-Q0ZLJ4vk3vqmV4Kwp0sbrjxLyB8Q4ZgNsiRH=s88-c-k-c0x00ffffff-no-rj-mo"/>
+        <ChannelImage type={type} src={channel.img}/>
         <Texts>
-            <Title>Test Video</Title>
-            <ChannelName>Lama Dev</ChannelName>
-            <Info>660,908 views 1 day ago</Info>
+            <Title>{video.title}</Title>
+            <ChannelName>{channel.name}</ChannelName>
+            <Info>{video.views } views {format(video.createdAt)}</Info>
         </Texts>
       </Details>
     </Container>
