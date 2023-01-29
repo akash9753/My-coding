@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { SearchOutlined, VideoCallOutlined } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Upload from "./Upload";
 
 const Conatiner = styled.div`
   /* background-color:red;*/
@@ -71,8 +72,10 @@ const Avatar = styled.img`
 `;
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false)
   const { currentUser } = useSelector((state) => state.user);
   return (
+    <>
     <Conatiner>
       <Wrapper>
         <Search>
@@ -81,7 +84,7 @@ const Navbar = () => {
         </Search>
         {currentUser ? (
           <User>
-            <VideoCallOutlined />
+            <VideoCallOutlined onClick={()=>setOpen(true)}/>
             <Avatar />
             {currentUser.name}
           </User>
@@ -95,6 +98,8 @@ const Navbar = () => {
         )}
       </Wrapper>
     </Conatiner>
+    {open && <Upload setOpen={setOpen}/>}
+    </>
   );
 };
 
