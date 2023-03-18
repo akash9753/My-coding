@@ -5,7 +5,7 @@ var raj = {
       console.log("Hello",this);
     }
 }
-raj.greet()//Hello {name: 'raj', greet: ƒ}
+raj.greet()//Hello {name: 'raj', greet: ƒ}//implicit binding third rule
 
 var localAskFunc = raj.greet
 localAskFunc

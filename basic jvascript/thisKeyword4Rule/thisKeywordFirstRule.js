@@ -9,8 +9,16 @@
 //3. new keyword ill call this vichle function with the value of this set to ne object
 //Vehicle.call{}
 //4. if the Vehicle function is not returning anything it will return brand new object
+
+//1st Example
+function Vehicle1(){
+    console.log(this);//Vehicle1 {}
+}
+new Vehicle1();
+
+//2nd Example
 function Vehicle(name){
     this.name = name;
-    console.log(this);
+    console.log(this);//Vehicle { name: 'car' }
 }
 new Vehicle("car");
