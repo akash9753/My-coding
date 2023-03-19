@@ -112,3 +112,46 @@ const {name5,age} = user52;
 console.log(name5);
 const {fullName:{first}} = user52;
 console.log(first);
+//-----------------------------------
+let v = {greeting:"Hey!"}
+let n;
+
+n = v;
+n.greeting = "Hello";
+console.log(n.greeting);
+//-----------------------------------
+console.log({a:1} == {a:1});//false
+console.log({a:1} === {a:1});//false
+//-----------------------------------
+let person = {name: "akash"}
+const members = [person]
+person.name = null;
+console.log(members);
+//-----------------------------------
+const value = {number : 10}
+const multiply = (x={...value})=>{
+    console.log((x.number *= 2));
+}
+multiply();
+multiply();
+multiply(value);
+multiply(value);
+//------------------------------------
+function changeAgeAndReference(person){
+    person.age = 25;
+    person={
+        name:"john",
+        age:50
+    }
+    return person;
+}
+const personObj1 = {
+    name:"alex",
+    age:30
+}
+const personObj2 = changeAgeAndReference(personObj1);
+console.log(personObj1);
+console.log(personObj2);
+
+
+
