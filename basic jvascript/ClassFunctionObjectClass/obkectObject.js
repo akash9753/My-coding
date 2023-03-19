@@ -1,5 +1,7 @@
 var obj = {}
+console.log(typeof(obj));//object
 var obj = new Object()
+console.log(typeof(Object));
 
 function Vehcile(numWheels,price){
     this.numWheels = numWheels,
@@ -18,4 +20,4 @@ var Vehcile = new Vehcile(4,60000)
 //V1
 
 //Object => this is constructor function
-//object => key value pair 
+//object => key value pair //non primitive datatype
