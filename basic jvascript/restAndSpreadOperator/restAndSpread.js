@@ -21,4 +21,14 @@ function sumOfNumbers(...args) {
     return sum;
 }
 
-console.log(sumOfNumbers(1,2,3,4,5));
+const num = [1,2,3,4,5]
+console.log(sumOfNumbers(...num));
+
+const fn = (a,x,y,...numbers)=>{
+    console.log(typeof numbers);
+    console.log(...numbers);
+    const [b,c]  = [...numbers];
+    console.log(a,x,y,b,c);
+}
+
+fn(5,6,3,7,8)
