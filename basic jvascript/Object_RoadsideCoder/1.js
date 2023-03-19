@@ -98,3 +98,17 @@ const settings ={
 const data = JSON.stringify(settings,["level","health"])
 console.log(data);
 //---------------------------------------------
+//Destructuring of an object
+let user52 = {
+    name5: "akash",
+    age:24,
+    fullName:{
+        first:"Akash",
+        last:"Patel"
+    }
+}
+
+const {name5,age} = user52;
+console.log(name5);
+const {fullName:{first}} = user52;
+console.log(first);

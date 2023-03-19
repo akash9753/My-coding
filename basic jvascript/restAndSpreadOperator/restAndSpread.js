@@ -32,3 +32,11 @@ const fn = (a,x,y,...numbers)=>{
 }
 
 fn(5,6,3,7,8)
+
+function getItems(fruitList, favoriteFruit, ...args){
+    console.log(fruitList);
+    console.log(favoriteFruit);
+    console.log(args);
+    return [...fruitList,...args,favoriteFruit]
+}
+console.log(getItems(["banana","apple"],"pear","orange","cheeku"));
