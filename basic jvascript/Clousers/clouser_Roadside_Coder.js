@@ -73,3 +73,44 @@ console.time("50");
 clouser(50);
 console.timeEnd("50");
 //--------------------------------------------
+//How would u use a clouser to create a private counter 
+function counterFun(){
+    var _counter = 0;
+
+    function add(inc){
+         _counter += inc;
+    }
+    function retrive(){
+        return "Counter = "+ _counter;
+    }
+    return {
+        add,
+        retrive
+    }
+}
+const c = counterFun()
+c.add(5);
+c.add(10);
+console.log(c.retrive());
+//-------------------------------------
+//make this run only once
+let view;
+function likeThisVideo(){
+    let called = 0;
+    return function(){
+        if(called > 0){
+            console.log("Already Subscribed to Roadside Coder");
+        }else{
+            view = "Roadside Coder";
+            console.log("Subscribe to", view);
+            called++;
+        }
+    }
+}
+let isSubscribed = likeThisVideo()
+isSubscribed()
+isSubscribed()
+isSubscribed()
+isSubscribed()
+isSubscribed()
+//---------------------------------------
