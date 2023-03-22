@@ -264,6 +264,44 @@
 
 // console.log("stop");
 //4.promise.any => only return 1st fullfill promise and ignore all the rejected once
+// console.log("start");
+
+// function importantAction(username1) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(`Subscribe to ${username1}`);
+//     }, 1000);
+//   });
+// }
+
+// function likeThisVideo(video) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       reject(`Like the ${video} video`);
+//     }, 100);
+//   });
+// }
+// function shareTheVideo(video) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(`share the ${video} video`);
+//     }, 500);
+//   });
+// }
+
+// Promise.any([
+//   importantAction("Roadside Coder"),
+//   likeThisVideo("javascript interview question"),
+//   shareTheVideo("javascript interview question"),
+// ])
+//   .then((res) => console.log(res))
+//   .catch((err) => {
+//     console.log("Error: Promise failed", err);
+//   });
+
+// console.log("stop");
+//-----------------------------------------
+//async await modern approach
 console.log("start");
 
 function importantAction(username1) {
@@ -277,26 +315,30 @@ function importantAction(username1) {
 function likeThisVideo(video) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      reject(`Like the ${video} video`);
+      resolve(`Like the ${video} video`);
     }, 100);
   });
 }
 function shareTheVideo(video) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(`share the ${video} video`);
+      reject(`share the ${video} video`);
     }, 500);
   });
 }
 
-Promise.any([
-  importantAction("Roadside Coder"),
-  likeThisVideo("javascript interview question"),
-  shareTheVideo("javascript interview question"),
-])
-  .then((res) => console.log(res))
-  .catch((err) => {
-    console.log("Error: Promise failed", err);
-  });
+const result = async () => {
+    try{
+        const msg1 = await importantAction("Roadside Coder");
+        const msg2 = await likeThisVideo("javascript interview question");
+        const msg3 = await shareTheVideo("javascript interview question");
+      
+        console.log({msg1,msg2,msg3});
+    }catch(error){
+        console.error("Promise Failed",error);
+    }
+  
+};
+result()
 
 console.log("stop");
