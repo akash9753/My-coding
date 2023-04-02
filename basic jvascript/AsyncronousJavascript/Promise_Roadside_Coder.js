@@ -302,43 +302,148 @@
 // console.log("stop");
 //-----------------------------------------
 //async await modern approach
-console.log("start");
+// console.log("start");
 
-function importantAction(username1) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(`Subscribe to ${username1}`);
-    }, 1000);
-  });
-}
+// function importantAction(username1) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(`Subscribe to ${username1}`);
+//     }, 1000);
+//   });
+// }
 
-function likeThisVideo(video) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(`Like the ${video} video`);
-    }, 100);
-  });
-}
-function shareTheVideo(video) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      reject(`share the ${video} video`);
-    }, 500);
-  });
-}
+// function likeThisVideo(video) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(`Like the ${video} video`);
+//     }, 100);
+//   });
+// }
+// function shareTheVideo(video) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       reject(`share the ${video} video`);
+//     }, 500);
+//   });
+// }
 
-const result = async () => {
-    try{
-        const msg1 = await importantAction("Roadside Coder");
-        const msg2 = await likeThisVideo("javascript interview question");
-        const msg3 = await shareTheVideo("javascript interview question");
+// const result = async () => {
+//     try{
+//         const msg1 = await importantAction("Roadside Coder");
+//         const msg2 = await likeThisVideo("javascript interview question");
+//         const msg3 = await shareTheVideo("javascript interview question");
       
-        console.log({msg1,msg2,msg3});
-    }catch(error){
-        console.error("Promise Failed",error);
-    }
+//         console.log({msg1,msg2,msg3});
+//     }catch(error){
+//         console.error("Promise Failed",error);
+//     }
   
-};
-result()
+// };
+// result()
 
-console.log("stop");
+// console.log("stop");
+//------------------------------------------------------------------------
+//Promise interview question 
+//q1
+// console.log("start");
+
+// const promise1 = new Promise((resolve,reject)=>{
+//    console.log(1);
+//    resolve(2);
+// })
+
+// promise1.then((res)=>{
+//   console.log(res);
+// })
+
+// console.log("end");
+//-----------------------------------------------------------------------
+// console.log("start");
+
+// const promise2 = new Promise((resolve,reject)=>{
+//    console.log(1);
+//    resolve(2);
+//    console.log(3);
+// })
+
+// promise2.then((res)=>{
+//   console.log(res);
+// })
+
+// console.log("end");
+//----------------------------------------
+// console.log("start");
+
+// const promise3 = new Promise((resolve,reject)=>{
+//    console.log(1);
+//    console.log(3);
+// })
+
+// promise3.then((res)=>{
+//   console.log("Result",res);
+// })
+
+// console.log("end");
+//---------------------------------------------
+// console.log("start");
+
+// const fn = () =>
+//   new Promise((resolve,reject)=>{
+//       console.log(1);
+//       resolve("suucess")
+//   })
+//   console.log("middel");
+
+// fn().then((res)=>{
+//   console.log(res);
+// })
+
+// console.log("end");
+//----------------------------------------------
+// function job(){
+//   return new Promise((resolve,reject)=>reject())
+// }
+// let promise = job()
+
+// promise
+//      .then(()=>console.log("Success 1"))
+//      .then(()=>console.log("Success 2"))
+//      .then(()=>console.log("Success 3"))
+//      .catch(()=>console.log("Error 1"))
+//      .then(()=>console.log("Success 4"))
+//------------------------------------------------
+// const job = (state) =>{
+//   return new Promise((resolve,reject)=>{
+//     if(state){
+//       resolve("success")
+//     }else{
+//       reject("error")
+//     }
+//   })
+// }
+
+// let promise = job(true);
+
+// promise
+//     .then((data)=>{
+//       console.log(data);
+//       return job(false);
+//     })
+//     .catch((error)=>{
+//       console.log(error);
+//       return "error caught"
+//     })
+//     .then((data)=>{
+//       console.log(data);
+//       return job(true);
+//     })
+//     .catch((error)=>{
+//       console.log(error);
+//     })
+//------------------------------------
+const firstPromise = new Promise((resolve,reject)=>{
+      resolve("First")
+})
+const secondPromise = new Promise((resolve,reject)=>{
+  resolve(firstPromise)
+})
