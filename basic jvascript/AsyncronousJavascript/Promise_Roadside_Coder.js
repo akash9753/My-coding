@@ -441,9 +441,35 @@
 //       console.log(error);
 //     })
 //------------------------------------
-const firstPromise = new Promise((resolve,reject)=>{
-      resolve("First")
-})
-const secondPromise = new Promise((resolve,reject)=>{
-  resolve(firstPromise)
+// const firstPromise = new Promise((resolve,reject)=>{
+//       resolve("First")
+// })
+// const secondPromise = new Promise((resolve,reject)=>{
+//   resolve(firstPromise)
+// })
+// secondPromise
+//  .then((res)=>{
+//   console.log(res);
+//     return res;
+//  })
+//  .then((res)=>console.log(res))
+//------------------------------------------
+const loadJson =async (url) =>{
+  let response = await fetch(url)
+  if(response.status === 200){
+    let json = await fetch(url);
+    return json;
+  }
+  throw new Error(response,status)
+  // return fetch(url).then((response)=>{
+  //   if(response.status === 200){
+  //      return response.json()
+  //   }else{
+  //      throw new Error(response.status);
+  //   }
+  // })
+}
+
+loadJson("http://fakeurl.com/no-such-user.json").catch((err)=>{
+  console.log(err);
 })
