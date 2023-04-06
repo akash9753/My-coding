@@ -72,7 +72,7 @@ a[b] = 123;
 a[c] = 456;
 
 console.log(a[b]);//a["[object Object]"] = 123;
-//object can not be converted into a key unless its string
+//object can not be converted into a string unless its string
 //when tries to convert object into string forcefully it gets converted into [object Object] 
 //------------------------------------
 const user5 = {
