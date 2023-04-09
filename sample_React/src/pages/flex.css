@@ -1,0 +1,36 @@
+.container {
+    display: flex; /* or inline-flex */
+  }
+  
+  .item {
+    background: #333;
+    height: 4rem;
+    margin: 0 1rem;
+  }
+
+  .item_1_color{
+    background: rgb(236, 236, 236);
+    height: 4rem;
+  }
+
+  .item_2_color{
+    background: rgb(192, 23, 23);
+    height: 4rem;
+  }
+
+  .item_3_color{
+    background: rgb(12, 221, 64);
+    height: 4rem;
+  }
+  
+  .item1 {
+    flex: 2;
+  }
+  
+  .item2 {
+    flex: 1;
+  }
+
+  .item3 {
+    flex: 2;
+  }
