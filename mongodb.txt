@@ -1,0 +1,102 @@
+show dbs
+use mydb
+db => shows the db name
+db.stats()
+
+show collections
+db.createCollection('product')
+db.product.drop()
+db.produ.renameCollection('product')
+
+db.product.insert({title:"p23", price:500, description: "test p1",category:"electronic",manufacturer:"menu1"})
+db.product.insertMany([{title:"p16", price:600, description: "test p16"},
+                       {title:"p17", price:700, description: "test p17"},
+                       {title:"p18", price:800, description: "test p18"},
+                       {title:"p19", price:900, description: "test p19"},
+                       {title:"p20", price:1000, description: "test p20"},
+                       {title:"p21", price:1100, description: "test p21"},
+                       {title:"p22", price:1200, description: "test p22"},
+                       
+])
+
+db.product.find()
+db.product.find().count()
+db.product.find().hasNext()
+db.product.find().next()
+db.product.find().limit(3)
+db.product.find().skip().limit(3)
+db.product.find().skip(3*1).limit(3)
+db.product.find().limit(3).pretty()
+
+db.product.find({title:"p7"})
+db.product.find({price:{$gt:600}})
+db.product.find({},{title:1})
+db.product.find({},{title:1, price:1})
+db.product.find({},{description:0})
+db.product.find({},{title:1,_id:0})
+db.product.update({_id:ObjectId("61d99ef54714fb1bdd5f3f54")},{title:'product 1 updated', price:1000, description:"test product"})
+db.product.find({_id:ObjectId("61d99ef54714fb1bdd5f3f54")})
+db.product.update({_id:ObjectId("61d99ef54714fb1bdd5f3f54")},{$set: {price:1}})
+db.product.updateMany({price:700},{$set: {price:1}})
+db.product.remove({"_id":ObjectId("61d998cf84d81d7d7b7ad783")})
+db.product.deleteMany({price:800})
+
+--------------------------------------------------------
+Udemy mongo
+[
+  {
+    "departureAirport": "MUC",
+    "arrivalAirport": "SFO",
+    "aircraft": "Airbus A380",
+    "distance": 12000,
+    "intercontinental": true
+  },
+  {
+    "departureAirport": "LHR",
+    "arrivalAirport": "TXL",
+    "aircraft": "Airbus A320",
+    "distance": 950,
+    "intercontinental": false
+  }
+]
+-------------------------------
+> db.flightData.insertOne({
+...     "departureAirport": "MUC",
+...     "arrivalAirport": "SFO",
+...     "aircraft": "Airbus A380",
+...     "distance": 12000,
+...     "intercontinental": true
+...   })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("64396ee082b9bbf5dab07526")
+}
+-----------------------------------
+mongo db convert json data into BSON for storing
+------------------------------------
+db.flightData.deleteOne({departureAirport : "MUC"})
+
+ db.flightData.updateOne({distance:12000},{$set:{marker: "delete"}})
+
+ db.flightData.updateMany({},{$set:{marker: "toDelete"}})
+
+ db.flightData.deleteMany({marker: "toDelete"})
+
+  db.flightData.find({distance:{$gt:900}}).pretty()
+
+db.flightData.findOne({distance:{$gt:900}}) findOne will reeturn only one row which mathe the criteria
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

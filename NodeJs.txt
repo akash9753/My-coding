@@ -1,0 +1,179 @@
+ Q - Why nodejs is single threded?
+Nodejs uses a single threded model in order to support async processing
+
+with async processing an application can perform better and is more scalable under web loads
+
+Nodejs makes use of a single-threded model approach rather than typical thread-based 
+implementation
+
+Q - how do node.js works?
+nodejs is a virtual machine that uses javascript as its scripting language and runs on a v8
+environment.
+
+it works on a single-threded event loop and a non-blocking I/O which provides high rate 
+as it can handle a higher number of concurrent requests.
+
+by making use of the HTTP module Nodejs can run on any any stand alone web servr
+
+Q where nodejs can be used?
+1.Real-time web application
+2.network apllication
+3.distributed system
+4.general purpose application
+
+Q how many types of API functions are there in nodejs?
+1 Asyncrohonous, non blocking function
+2 Synchoronous blocking 
+
+Q diff between Asyncrohonous and Non-blocking
+
+Asyncrohonous - run in parllel, using these we can make asynchranous http request that do
+not wait for for the server to respond
+
+Non-blocking - Non-blocking functions are used in regards with I/O operations
+
+they immediately respond with whatever data is available and keeps on running as per the 
+request
+
+Q what is package.json
+its a heart of entire application 
+contains meta data of the project
+what are dependencies are used in the project
+
+Q what do u understand by event driven programming?
+
+havily makes use of events for trigrring various functions
+this approach mainly follows the publish-subscribe pattern
+
+event driven programming basically uses 2 concept 
+1. event handler which is callback functions that will be called when event is triggred
+2. and there will be a loop for listening 
+
+Q what is an event loop and how does it works?
+An event loop in nodejs handles all the asynchronous callbacks in an application
+event loop also follows publish subscribe method
+
+Q list down the major security implementations within Node.js?
+1.Authentication
+2.Error Handling
+
+Q what is callback hell?
+pyramid of doom
+unredable nested callbacks
+difficult to read and debug
+
+Q what is middleware
+is a fun which recieves the request and response
+
+what middelware does
+1.execute any type of code
+2.update or modify request and response objects
+3.finish the request response cycle
+4.invoke the next middelware in the stack
+
+
+Q what do u understand by global objects in node.js
+global are the objects which are global in nature and are available in all the modules of the applicaton
+u can use these objects objects directly in your application rather than having to include them explicitly
+the global objects can be modules, functions, strings, objetcs etc
+
+----------------------------------------------------------------------
+node.js coding ninja
+
+console.log(process.argv)
+var args = process.argv.slice(2)
+console.log("Adding the numbers: " , add(parseInt[0]), parseInt(args[1])));
+
+node index.js 1 2
+
+-------------------------------------
+Types of Modules
+1.Local modules
+2.Built-in modules
+  a.path
+  b.events
+  c.fs
+  d.stream
+  e.http
+3.Third party modules
+---------------------------------------
+Libuv and Async Method Summary
+
+In Nodejs async methods are handled by libuv
+
+they are handled in two diff ways
+1.Native async mechanism  2.Thread pool
+
+Whenever possible libuv will use native async mechanism in the os so as to avoid 
+blocking the main thread
+
+Since this is the part of the kernel, there is diff mechanism for each OS. we have
+epoll for linux, Kqueue for macos and IO Completeion Port on windows
+
+Relying on native async mechanism makes Node scalable as the only limitations is the 
+operating system kernal
+
+Example of this type is a network I/O operation
+
+if there is no native async support and the task is file I/O or CPU intensive
+libuv uses the thread pool to avoid blocking the main thread 
+
+although the thread pool preserves asynchrocity with respect to node's main thread 
+it can still become a bottleneck if all threads are busy
+--------------------------------------------
+Event Loop
+1.Whenever an async task completes in libuv at what point does node decide to run
+the associated callback function on the call stack
+2.what about async methods like setTimeout and setInterval which also delay the
+excection of a callback function
+3.if two async tasks such as setTimeout and readFile complete at the same time how 
+does Node decide which callback function to run first on the call stack
+
+Event loop is C program is part of libuv
+
+A design pattern that orchestrates or co-ordinate the excecution of synchrous and 
+asynchrous code in nodejs
+1.Visual representation
+2.Run a few experiment
+---------------------------------
+npm is a Software Library
+-------------------------------
+package.json
+package.json is npms configuration file
+
+it is a json file that typically in the root directory of your package and holds 
+varoius metadata relevant to the package
+
+why
+package.json is the central place to configure and describe how to interact with
+and run your package
+
+it is primarly used by the npm CLI
+
+package-lock.json
+npm install is not deterministic, which poses a problem when you’re working on a 
+repo (with multiple devs) containing thousands of dependencies.
+The package-lock.json file ensures that the same node_modules tree is generated 
+every time npm install is run.
+------------------------------------------
+A dependency is a library that a project needs to function effectively. 
+DevDependencies are the packages a developer needs during development.
+nodemon 
+-----------------------------------------
+Cluster Module
+Node is a single threaded
+No matters how many cores you have, node only uses a single core of your CPU
+This is fine for I/O operations but if the code has long running and CPU intensive
+operations, your application might struggle from a performance point of view
+---------------------------------------
+Cluster Module contd
+The cluster module enables the cration of child processes (also called workers)
+that run sumultaneously
+All created workers share the same server port
+
+
+
+
+
+
+
