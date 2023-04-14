@@ -86,6 +86,19 @@ db.flightData.deleteOne({departureAirport : "MUC"})
 
 db.flightData.findOne({distance:{$gt:900}}) findOne will reeturn only one row which mathe the criteria
 
+db.flightData.update({_id: ObjectId("643976afe3876f6c47949442")},{$set:{delayed:true}})
+
+db.flightData.update({_id: ObjectId("643976afe3876f6c47949442")},{delayed:true})
+this query will overwrite existing data
+
+db.flightData.replaceOne({_id: ObjectId("643976afe3876f6c47949442")},{
+...     "departureAirport": "MUC",
+...     "arrivalAirport": "SFO",
+...     "aircraft": "Airbus A380",
+...     "distance": 12000,
+...     "intercontinental": true
+...   })
+
 
 
 
