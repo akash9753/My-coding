@@ -223,7 +223,20 @@ db.passangers.find({hobbies:"sports"}).pretty() //for array
 
 db.flightData.find({"status.description":"on-time"}).pretty()//for object
 
-
+------------------------------------------------
+1.Data Types
+2.Text "text"
+3.Boolean true
+4.Number 
+1.Integer (int32) 55
+2.NumberLong (int64) 100000000
+3.NumberDecimal 12.99
+5.ObjectId ObjectId("sfasd")
+6.Date
+1.ISO Date("2018-09-09")
+2.Timestamp (11421532)
+7.embdded document {"a":{...}}
+8.Array {"b":[...]}
 
 
 
