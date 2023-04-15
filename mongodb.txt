@@ -85,7 +85,7 @@ db.flightData.deleteOne({departureAirport : "MUC"})
 
   db.flightData.find({distance:{$gt:900}}).pretty()
 
-db.flightData.findOne({distance:{$gt:900}}) findOne will reeturn only one row which mathe the criteria
+db.flightData.findOne({distance:{$gt:900}}) findOne will return only one row which mathe the criteria
 
 db.flightData.update({_id: ObjectId("643976afe3876f6c47949442")},{$set:{delayed:true}})
 
@@ -210,10 +210,18 @@ db.passangers.find().forEach((p)=>{printjson(p)})
 
 pretty() only exists in cusror
 
+db.passangers.find({},{name:1,_id:0}).pretty()
 
+-----------------------------------------------
+embdded or nested document
 
+db.flightData.updateMany({},{$set:{status:{description:"on-time",lastUpdate:"1 hour ago",details:{responsible:"akash patel"}}}})
 
+db.passangers.findOne({name:"Albert Twostone"}).hobbies
 
+db.passangers.find({hobbies:"sports"}).pretty() //for array
+
+db.flightData.find({"status.description":"on-time"}).pretty()//for object
 
 
 
