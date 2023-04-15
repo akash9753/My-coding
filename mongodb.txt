@@ -5,7 +5,8 @@ db => shows the db name
 show collections
 db.createCollection('product')
 db.product.drop()
-db.produ.renameCollection('product')
+db.product.renameCollection('product')
+
 
 db.product.insert({title:"p23", price:500, description: "test p1",category:"electronic",manufacturer:"menu1"})
 db.product.insertMany([{title:"p16", price:600, description: "test p16"},
@@ -17,6 +18,7 @@ db.product.insertMany([{title:"p16", price:600, description: "test p16"},
                        {title:"p22", price:1200, description: "test p22"},
                        
 ])
+db.product.find().pretty()
 
 db.product.find()
 db.product.find().count()
