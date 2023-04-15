@@ -243,6 +243,11 @@ db.companies.insertOne({name:"Fresh Apples", isStartup: true, employees: 33, fun
 db.numbers.insertOne({a:NumberInt(1)})
 NumberInt(1) this reduces dataSize
 ------------------------------ 
-
-
-
+CREATE
+db.insertMany([{name:akash,age:31},{name:"chrish",age:25}])
+----------------------------
+operator query projection
+db.movies.find({"rating.average":{$gt:7}}).pretty()
+db.movies.find({genres:"Drama"}).pretty()
+db.movies.find({genres:"Drama"}).pretty()
+//shows only darama array
