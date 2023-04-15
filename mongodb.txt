@@ -1,8 +1,7 @@
 show dbs
 use mydb
-db => shows the db name
 db.stats()
-
+db => shows the db name
 show collections
 db.createCollection('product')
 db.product.drop()
@@ -98,6 +97,7 @@ db.flightData.replaceOne({_id: ObjectId("643976afe3876f6c47949442")},{
 ...     "distance": 12000,
 ...     "intercontinental": true
 ...   })
+
 
 
 
