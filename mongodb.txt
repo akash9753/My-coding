@@ -237,9 +237,12 @@ db.flightData.find({"status.description":"on-time"}).pretty()//for object
 2.Timestamp (11421532)
 7.embdded document {"a":{...}}
 8.Array {"b":[...]}
-
-
-
+---------------------------
+db.companies.insertOne({name:"Fresh Apples", isStartup: true, employees: 33, funding:123456789,details:{ceo:"Mark Super"},tags:[{title:"perfect"},{}],foundingDate:new Date(),insertedAt: new Timestamp()})
+----------------------------
+db.numbers.insertOne({a:NumberInt(1)})
+NumberInt(1) this reduces dataSize
+------------------------------ 
 
 
 
