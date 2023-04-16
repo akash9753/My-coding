@@ -249,5 +249,32 @@ db.insertMany([{name:akash,age:31},{name:"chrish",age:25}])
 operator query projection
 db.movies.find({"rating.average":{$gt:7}}).pretty()
 db.movies.find({genres:"Drama"}).pretty()
-db.movies.find({genres:"Drama"}).pretty()
+db.movies.find({genres:[Drama]}).pretty()
 //shows only darama array
+db.movies.find({runtime:{$in:[30,42]}}).pretty()
+db.movies.find({"rating.average":{$lt:5}}).pretty()
+db.movies.find({"rating.average":{$lt:5}}).count()
+db.movies.find({$or:[{"rating.average":{$lt:5}},{"rating.average":{$gt:9.3}}]}).count()
+db.movies.find({$nor:[{"rating.average":{$lt:5}},{"rating.average":{$gt:9.3}}]}).count()
+db.movies.find({$and:[{"rating.average":{$gt:9}},{genres:"Drama"}]}).count()
+db.movies.find({runtime:{$not:{$eq:60}}}).count()
+left some operator
+------------------------------------
+Curosr 
+const dataCursor = db.movies.find()
+ dataCursor.next()//only one doc
+ dataCursor.forEach((doc)=>{printjson(doc)})//all doc
+ ----------------------------------
+ sorting
+ db.movies.find().sort({"rating.average":-1,rubtime:-1}).pretty()
+ ---------------------------------
+ Skipping & limiting
+db.movies.find().sort({"rating.average":-1,rubtime:-1}).skip(10).limit(10).pretty()
+------------------------------------
+projection to shape our data
+db.movies.find({},{name:1,genres:1,runtime:1,rating:1}).pretty()
+db.movies.find({},{name:1,genres:1,runtime:1,rating:1,_id:0}).pretty()
+db.movies.find({},{name:1,genres:1,runtime:1,rating:1,_id:0}).pretty()
+-----------------------------------
+Update operation
+db.users.updateOne({_id: ObjectId("643b948cedfd41030fa5ef15")},{$set:{hobbies:[{title:"sports",frequency:5},{title:"Cooking",frequency:1}]}})
